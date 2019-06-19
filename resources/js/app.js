@@ -92,8 +92,6 @@ Vue.use(Popover)
 import VueNoty from 'vuejs-noty'
 Vue.use(VueNoty);
 
-Vue.use(require('vue-shortkey'));
-
 const app = new Vue({
     el: '#app'
 });
