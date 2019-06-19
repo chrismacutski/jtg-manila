@@ -1,10 +1,12 @@
-<div class="hero-wrap js-fullheight" style="background-image: url({{ '/' . $series->image_src }});" data-stellar-background-ratio="0.5">
+<div class="hero-wrap js-fullheight" style="background-image: url({{ $series ? '/' . $series->image_src : '/images/1.jpg' }});" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
             <div class="overlay"></div>
             <div class="col-md-10 text-center jtg-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <h1 class="mb-0">{{ $series->name }}</h1>
+                @if ($series)
+                    <h1 class="mb-0">{{ $series->name }}</h1>
+                @endif
                 {{--<h3 class="subheading pb-1">Christ is the Vision Making Disciples is our Mission</h3>--}}
 
                 <p>
