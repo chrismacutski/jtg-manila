@@ -11,7 +11,7 @@
         ])
     @endif
 
-    @if (is_null($on_going_event))
+    @if (is_null($on_going_event) && !is_null($upcoming_event))
         @include('frontend.partials.home.upcoming-event', [
             'upcoming_event' => $upcoming_event
         ])
