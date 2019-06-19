@@ -6,9 +6,31 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
+
+@import "../../node_modules/font-awesome/css/font-awesome.css";
+
+@import 'chat';
+
+@import 'frontend';
+
+@import "../../node_modules/trix/dist/trix.css";
+
+@import '~vuejs-noty/dist/vuejs-noty.css';
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.bg-form {
+  background-color: #727478 !important;
+}
+
+a.bg-form:hover,
+a.bg-form:focus,
+button.bg-form:hover,
+button.bg-form:focus {
+  background-color: #727478 !important;
+}
+

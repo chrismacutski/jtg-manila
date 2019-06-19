@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\JTG\Event;
+use App\Series;
+use App\Sermon;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -26,6 +29,18 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        Route::bind('event', function ($value) {
+            return Event::findByHashId($value) ?? abort(404);
+        });
+
+        Route::bind('series', function ($value) {
+            return Series::findByHashId($value) ?? abort(404);
+        });
+
+        Route::bind('sermon', function ($value) {
+            return Sermon::findByHashId($value) ?? abort(404);
+        });
     }
 
     /**
@@ -52,8 +67,16 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/frontend.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/chat.php'));
     }
 
     /**

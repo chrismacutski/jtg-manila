@@ -44,13 +44,42 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo'
+import Echo from 'laravel-echo'
 
-// window.Pusher = require('pusher-js');
+window.Pusher = require('pusher-js');
 
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
+let key = document.head.querySelector('meta[name="pusher-key"]');
+let port = document.head.querySelector('meta[name="pusher-port"]');
+let encrypted = document.head.querySelector('meta[name="pusher-encrypted"]');
+let wsHost = document.head.querySelector('meta[name="pusher-ws-host"]');
+
+if (key) {
+    window.Echo = new Echo({
+        broadcaster: 'pusher',
+        key: key.content,
+        wsHost: wsHost.content,
+        wsPort: port.content,
+        // wssPort: port.content,
+        disableStats: true,
+        encrypted: encrypted.content
+    });
+} else {
+    console.error('Pusher Key not found');
+}
+
+window.collect = require('collect.js');
+window.moment = require('moment');
+
+require('../../node_modules/jquery-migrate/dist/jquery-migrate.min.js');
+
+window.waypoint = require('../../node_modules/waypoints/lib/jquery.waypoints.min.js');
+
+window.jqueryEasing = require('../../node_modules/jquery.easing/jquery.easing.1.3.min.js');
+window.stellar = require( '../../node_modules/jquery.stellar/jquery.stellar.js');
+window.owlCarousel = require('owl.carousel');
+window.magnificPopup = require('../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js');
+window.AOS = require('../../node_modules/aos/dist/aos.js');
+window.animateNumber = require('../../node_modules/jquery.animate-number/jquery.animateNumber.min.js');
+window.Scrollax = require('../../node_modules/scrollax/scrollax.min.js');
+
+window.moment   = require('moment');

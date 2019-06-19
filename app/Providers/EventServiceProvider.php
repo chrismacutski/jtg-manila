@@ -15,6 +15,20 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
+        'Illuminate\Auth\Events\Verified' => [
+            'App\Listeners\LogVerifiedUser',
+        ],
+
+        'App\Events\NewConversationFound' => [
+            'App\Listeners\SendAutoReply'
+        ],
+
+        'App\Events\ReplySent' => [],
+
+        'App\Events\QueuePositionUpdated' => [],
+
+        'App\Events\ConversationClosed' => [],
+
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
