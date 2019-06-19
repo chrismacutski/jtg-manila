@@ -6,6 +6,7 @@ use App\JTG\Event;
 use App\Sermon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {

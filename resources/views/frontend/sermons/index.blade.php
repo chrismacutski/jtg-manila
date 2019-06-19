@@ -3,10 +3,17 @@
 @section('title', 'Sermons')
 
 @section('content')
-    @include('frontend.sermons.partials.banner2', [
-        'sermon' => $latest_sermon,
-        'sermon_img' => '/' . $latest_sermon->image_src,
-    ])
+    @if ($latest_sermon)
+        @include('frontend.sermons.partials.banner2', [
+            'sermon' => $latest_sermon,
+            'sermon_img' => '/' . $latest_sermon->image_src,
+        ])
+    @else
+        @include('frontend.sermons.partials.banner2', [
+            'sermon' => $latest_sermon,
+            'sermon_img' => '/images/1.jpg',
+        ])
+    @endif
 
     @if (!is_null($upcoming_event))
         @include('frontend.partials.home.upcoming-event', [

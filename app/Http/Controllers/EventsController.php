@@ -95,8 +95,9 @@ class EventsController extends Controller
     public function guestSignUp(Event $event)
     {
         try {
-            $event->signUpAttendee(NULL, request()->only('first_name', 'last_name', 'phone_number', 'email_address'));
+            $event->signUpAttendee(NULL, request()->only('first_name', 'last_name', 'phone_number', 'email_address', 'message'));
         } catch (\Exception $e) {
+            logger($e->getMessage());
             abort(500, $e->getMessage());
         }
 

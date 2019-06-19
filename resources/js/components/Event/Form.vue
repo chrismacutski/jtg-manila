@@ -180,23 +180,46 @@
 
         methods: {
             onSubmit() {
-                this.submitButtonText = 'Submitting ...';
+                this.submitButtonText = '<i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>';
 
-                axios.post(`/customer`, this.form)
+                axios.post(`/events/${this.jtgEvent.hash_id}/guest-sign-up`, this.form)
                     .then(({data}) => {
-                        this.$emit('created-customer');
+                        this.form.first_name = '';
+                        this.form.last_name = '';
+                        this.form.email_address = '';
+                        this.form.phone_number = '';
+                        this.form.type = '';
+                        this.form.message = '';
+
+                        this.$noty.success("You are now part of " + data.name + ", See you there!", {
+                            theme: 'metroui',
+                            layout: 'topRight',
+                        })
                     }).catch(error => {
-                    if (error.response.data.errors) {
-                        this.errors = error.response.data.errors;
-                    }
+                        if (error.response.data.errors) {
+                            this.errors = error.response.data.errors;
+                        }
 
-                    this.submitButtonText = 'SUBMIT';
-                });
+                        if(error.response.data.message) {
+                            this.form.first_name = '';
+                            this.form.last_name = '';
+                            this.form.email_address = '';
+                            this.form.phone_number = '';
+                            this.form.type = '';
+                            this.form.message = '';
+
+                            this.$nextTick(() => this.$refs.username.focus())
+
+                            this.$noty.error(error.response.data.message, {
+                                theme: 'metroui',
+                                layout: 'topRight',
+                            })
+                        }
+
+
+                        this.submitButtonText = 'SUBMIT';
+                    });
             }
-        },
-
-        mounted() {
-            console.log(this.jtgEvent.id);
         }
     }
 </script>

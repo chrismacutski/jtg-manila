@@ -29,3 +29,4 @@ Route::post('sermons/filter', 'SermonsController@filter')->name('sermons.filter'
 Route::get('events', 'EventsController@index')->name('events.index');
 Route::get('events/{event}', 'EventsController@show')->name('events.show');
 Route::post('events/filter', 'EventsController@filter')->name('events.filter');
+Route::post('events/{event}/guest-sign-up', 'EventsController@guestSignUp')->name('events.guest-sign-up');
