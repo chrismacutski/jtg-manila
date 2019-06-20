@@ -35,9 +35,11 @@
     @endif
 
 
+    @if ($sermons->count() > 0)
     @include('frontend.partials.home.latest-series', [
         'sermons' => $sermons
     ])
+    @endif
 
     @include('frontend.partials.home.who-we-are')
 

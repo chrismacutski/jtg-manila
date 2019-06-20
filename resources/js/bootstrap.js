@@ -76,10 +76,7 @@ window.waypoint = require('../../node_modules/waypoints/lib/jquery.waypoints.min
 
 window.jqueryEasing = require('../../node_modules/jquery.easing/jquery.easing.1.3.min.js');
 window.stellar = require( '../../node_modules/jquery.stellar/jquery.stellar.js');
-window.owlCarousel = require('owl.carousel');
-window.magnificPopup = require('../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js');
 window.AOS = require('../../node_modules/aos/dist/aos.js');
-window.animateNumber = require('../../node_modules/jquery.animate-number/jquery.animateNumber.min.js');
 window.Scrollax = require('../../node_modules/scrollax/scrollax.min.js');
 
 window.moment   = require('moment');

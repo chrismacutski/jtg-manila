@@ -1,5 +1,9 @@
 <div id="jtg-loader" class="show fullscreen">
-    <div class="circle" width="48px" height="48px">
-        <img src="{{ $img }}" alt="" class="loader-image">
-    </div>
+    <img src="{{ $img }}" style="width: 400px; height: 400px" alt="" class="loader-image">
 </div>
+
+{{--<div id="preloader" class="show">--}}
+    {{--<div class="loader"></div>--}}
+    {{--<img src="{{ $img }}" style="width: 200px; height: 200px" alt="" class="loader-image">--}}
+
+{{--</div>--}}
