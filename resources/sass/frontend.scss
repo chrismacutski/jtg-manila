@@ -1,13 +1,10 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
-@import './frontend/flaticon.css';
 @import './frontend/icomoon.css';
-@import './frontend/ionicons.css';
 @import "./frontend/animate.css";
-
-$font-primary: 'Poppins',Arial, sans-serif;
-$font-secondary: 'Raleway',Arial, sans-serif;
-$font-tertiary: 'Crimson Text', serif;
+$font-primary: 'Raleway',Arial, open-sans;
+$font-secondary: 'Raleway',Arial, open-sans;
+$font-tertiary: 'Raleway', open-sans;
 
 $white: #fff;
 $black: #000000;
@@ -20,7 +17,6 @@ $transp: rgba(248, 249, 250, .3);
 $gold: #665600;
 
 $darken: #4a5562;
-
 
 @mixin display-flex($value) {
   display: -webkit-box;
