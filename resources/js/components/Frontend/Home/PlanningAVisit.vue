@@ -103,7 +103,7 @@
     }
 
     .sModal {
-        z-index: 12 !important;
+        z-index: 16 !important;
     }
 </style>
 

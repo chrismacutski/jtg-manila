@@ -8,7 +8,7 @@
         <div class="col-9 d-flex align-items-center text-right">
             <ul class="jtg-social mt-2 mr-3">
                 {{--<li class="jtg-animate"><a href="#"><span class="icon-twitter"></span></a></li>--}}
-                <li class="jtg-animate"><a href="https://www.facebook.com/jesusthegospelmanilachurch/" target="_blank"><span class="icon-facebook"></span></a></li>
+                {{--<li class="jtg-animate"><a href="https://www.facebook.com/jesusthegospelmanilachurch/" target="_blank"><span class="icon-facebook"></span></a></li>--}}
             </ul>
 
             <button class="navbar-toggler d-flex align-items-center" type="button" data-toggle="collapse" data-target="#jtg-nav" aria-controls="jtg-nav" aria-expanded="false" aria-label="Toggle navigation">
