@@ -1,8 +1,20 @@
 <template>
     <div>
-        <p>
-            <button @click="showModal" class="btn btn-transparent py-3 px-4 jtg-animate">LET US KNOW YOU'RE COMING <i class="icon-chevron-right"></i></button>
-        </p>
+        <div class="jtg-planning-a-visit py-2" v-lazy:background-image="image">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 jtg-visit text-center p-5">
+                        <h3 class="jtg-animate mb-2">You are always welcome at JTG Manila Church!</h3>
+                        <h6 class="mt-2 font-weight-bold jtg-animate">Plan your visit and let us know that you're coming</h6>
+
+                        <p>
+                            <button @click="showModal" class="btn btn-transparent py-3 px-4 jtg-animate">LET US KNOW YOU'RE COMING <i class="icon-chevron-right"></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <sweet-modal ref="modal" modal-theme="dark" overlay-theme="dark" @close="closeModal" class="sModal">
             <div class="card bg-transparent mt-4 mb-4">
@@ -109,6 +121,8 @@
 
 <script>
     export default {
+        props: ['image'],
+
         data() {
             return {
                 modal_title: '',

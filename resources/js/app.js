@@ -81,6 +81,9 @@ Vue.component('search-series', require('./components/Series/Frontend/Search.vue'
 Vue.component('show-more-series', require('./components/Series/Frontend/ShowMore.vue').default);
 Vue.component('frontend-series-list', require('./components/Series/Frontend/List.vue').default);
 
+Vue.component('home-who-whe-are', require('./components/Frontend/Home/WhoWeAre.vue').default);
+Vue.component('home-map', require('./components/Frontend/Home/Map.vue').default);
+
 import SweetModal from "sweet-modal-vue/src/plugin.js";
 
 Vue.use(SweetModal);

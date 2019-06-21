@@ -41,11 +41,7 @@
     ])
     @endif
 
-    @include('frontend.partials.home.who-we-are')
-
-    @include('frontend.partials.home.map', [
-        'event_img' => '/images/jtg-manila-map.png'
-    ])
-
-    @include('frontend.partials.home.planning-a-visit')
+    <home-who-whe-are :image="{{ json_encode('/images/about.jpg') }}"></home-who-whe-are>
+    <home-map :image="{{ json_encode('/images/jtg-manila-map.png') }}"></home-map>
+    <planning-a-visit :image="{{ json_encode('/images/city.jpg') }}"></planning-a-visit>
 @stop
