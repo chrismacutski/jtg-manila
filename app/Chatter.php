@@ -44,13 +44,13 @@ class Chatter extends Model
 
     public static function findByFullName($firstName, $middleName, $lastName)
     {
-        $fullName = $firstName . ' ' . $middleName . ' ' . $lastName;
+        $fullName = strtoupper($firstName . ' ' . $middleName . ' ' . $lastName);
 
-        return static::where('nickname', $fullName)->first();
+        return static::where('nickname', 'LIKE', '%' . $fullName . '%')->first();
     }
 
     public function setNickname()
     {
-        return trim(sprintf('%s %s %s', $this->first_name, $this->middle_name, $this->last_name));
+        return strtoupper(trim(sprintf('%s %s %s', $this->first_name, $this->middle_name, $this->last_name)));
     }
 }

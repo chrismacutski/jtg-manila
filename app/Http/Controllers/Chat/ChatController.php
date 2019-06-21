@@ -72,7 +72,6 @@ class ChatController extends Controller
         }
 
         $payload = $this->payload_builder->buildForConversation(request()->all(), $conversation);
-        logger($payload);
         dispatch(new ProcessConversation($payload));
 
         return [
