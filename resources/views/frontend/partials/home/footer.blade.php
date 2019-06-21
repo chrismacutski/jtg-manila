@@ -8,7 +8,7 @@
                     <ul class="jtg-footer-social list-unstyled mt-5">
                         {{--<li class="jtg-animate"><a href="#"><span class="icon-twitter"></span></a></li>--}}
                         <li class="jtg-animate"><a href="https://www.facebook.com/jesusthegospelmanilachurch/" target="_blank"><span class="icon-facebook"></span></a></li>
-                        {{--<li class="jtg-animate"><a href="#"><span class="icon-instagram"></span></a></li>--}}
+                        <li class="jtg-animate"><a href="https://www.youtube.com/channel/UCWHMTaBhsLamibBIjqBDvUg" target="_blank"><span class="icon-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>

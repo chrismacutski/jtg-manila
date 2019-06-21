@@ -22,16 +22,16 @@
             'upcoming_events' => $more_events
         ])
     @else
-        <section class="jtg-intro py-2" style="background-image: url('/1.jpg');">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-md-6 jtg-animate">
-                        <h2><a href="#">New Event Coming Soon...</a></h2>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {{--<section class="jtg-intro py-2 bg-darker">--}}
+            {{--<div class="overlay"></div>--}}
+            {{--<div class="container">--}}
+                {{--<div class="row d-flex align-items-center">--}}
+                    {{--<div class="col-md-6 jtg-animate">--}}
+                        {{--<h2><a href="#">New Event Coming Soon...</a></h2>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</section>--}}
     @endif
 
 

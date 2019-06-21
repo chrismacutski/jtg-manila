@@ -21,6 +21,14 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload, {
+    preLoad: 1.3,
+    attempt: 1,
+    // the default is ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend']
+    listenEvents: [ 'scroll' ]
+})
 
 import { VueperSlides, VueperSlide } from 'vueperslides'
 
