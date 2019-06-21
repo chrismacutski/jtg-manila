@@ -3,9 +3,7 @@
 @section('title', 'About')
 
 @section('content')
-    @include('frontend.partials.about.real-made-teachings.banner', [
-        'real_made_teachings_banner_img' =>  '/images/real-made-teachings.jpg'
-    ])
+    <about-real-made-system :image="{{ json_encode('/images/real-made-teachings.jpg') }}"></about-real-made-system>
 
     @include('frontend.partials.about.nav')
 

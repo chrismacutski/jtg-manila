@@ -1,10 +1,10 @@
 <div class="hero-wrap js-fullheight">
     <home-banner-slider :images="{{
                     json_encode([
-                        url('/images/1.jpg'),
-                        url('/images/2.jpg'),
-                        url('/images/3.jpg'),
-                        url('/images/4.jpg'),
+                        url('/images/slider-lg-1.jpg'),
+                        url('/images/slider-lg-2.jpg'),
+                        url('/images/slider-lg-3.jpg'),
+                        url('/images/slider-lg-4.jpg'),
                     ])
                 }}"></home-banner-slider>
 </div>

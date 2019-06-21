@@ -3,9 +3,7 @@
 @section('title', 'About')
 
 @section('content')
-    @include('frontend.partials.about.vision.banner', [
-        'vision_banner_img' =>  '/images/about.jpg'
-    ])
+    <about-mission-vision :image="{{ json_encode('/images/about.jpg') }}"></about-mission-vision>
 
     @include('frontend.partials.about.nav')
 

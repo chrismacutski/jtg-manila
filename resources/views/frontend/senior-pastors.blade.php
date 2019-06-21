@@ -3,9 +3,7 @@
 @section('title', 'About')
 
 @section('content')
-    @include('frontend.partials.about.senior-pastors.banner', [
-        'leadership_banner_img' =>  '/images/about.jpg'
-    ])
+    <about-senior-pastors :image="{{ json_encode('/images/about.jpg') }}"></about-senior-pastors>
 
     @include('frontend.partials.about.nav')
 
