@@ -2,7 +2,7 @@
     <div class="hero-wrap js-fullheight" v-lazy:background-image="image" :style="{'height' : fullheight}" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+            <div :style="{'height' : fullheight}" class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                 <div class="col-md-10 text-center jtg-animate" data-scrollax=" properties: { translateY: '70%' }">
                     <h1 class="mb-0">LEADERSHIP</h1>
                     <div class="mouse">
