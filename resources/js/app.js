@@ -87,6 +87,7 @@ Vue.component('home-map', require('./components/Frontend/Home/Map.vue').default)
 Vue.component('about-history', require('./components/Frontend/About/History.vue').default);
 Vue.component('about-leadership', require('./components/Frontend/About/Leadership.vue').default);
 Vue.component('about-ministries', require('./components/Frontend/About/Ministries.vue').default);
+Vue.component('about-ministry-list', require('./components/Frontend/About/MinistryList.vue').default);
 Vue.component('about-mission-vision', require('./components/Frontend/About/MissionVision.vue').default);
 Vue.component('about-real-made-system', require('./components/Frontend/About/RealMadeSystem.vue').default);
 Vue.component('about-senior-pastors', require('./components/Frontend/About/SeniorPastors.vue').default);

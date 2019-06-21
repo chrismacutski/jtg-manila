@@ -7,5 +7,5 @@
 
     @include('frontend.partials.about.nav')
 
-    @include('frontend.partials.about.ministries.content')
+    <about-ministry-list></about-ministry-list>
 @stop
