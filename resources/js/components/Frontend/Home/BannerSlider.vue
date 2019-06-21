@@ -9,7 +9,7 @@
 
         <vueper-slide v-for="(img, i) in images"
                       :key="i"
-                      :image="img"
+                      v-lazy:background-image="img"
                       :style="'background-color: ' + ['#373a3e'][i % 2]">
             <div slot="slideContent">
                 <!--<h6>-->
