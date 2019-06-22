@@ -6,7 +6,7 @@
                 <div class="col-md-10 text-center jtg-animate" data-scrollax=" properties: { translateY: '70%' }">
                     <h1 class="mb-0">MISSION AND VISION</h1>
 
-                    <div class="mouse2">
+                    <div class="mouse">
                         <a href="#" class="mouse-icon">
                             <div class="mouse-wheel"><span class="fa fa-chevron-circle-down"></span></div>
                         </a>
