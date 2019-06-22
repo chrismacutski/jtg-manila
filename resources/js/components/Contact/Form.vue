@@ -176,7 +176,7 @@
 
         methods: {
             onSubmit() {
-                this.submitButtonText = 'Submitting ...';
+                this.submitButtonText = '<i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>';
 
                 axios.post(`/contacts`, this.form)
                     .then(({data}) => {
