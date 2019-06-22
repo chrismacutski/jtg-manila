@@ -27,7 +27,7 @@ class CreateChatterRequest extends FormRequest
         $rules = [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email_address' => 'nullable|email',
+            'email_address' => 'required|email',
             'phone_number' => 'nullable|max:12'
         ];
 
@@ -40,6 +40,7 @@ class CreateChatterRequest extends FormRequest
             'first_name.required' => 'The First Name field is required',
             'last_name.required' => 'The Last Name field is required',
             'email_address.email' => 'The Email Address field must be a valid email address',
+            'email_address.required' => 'The Email Address field is required',
             'phone_number.max' => 'The Phone Number field must not be greater than 12'
         ];
 

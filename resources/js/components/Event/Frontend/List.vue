@@ -16,7 +16,7 @@
                     <template v-if="events.count() > 0">
                         <div class="col-md-4 d-flex jtg-animate" :class="[shouldAnimate ? 'fadeInUp jtg-animated' : 'fadeInUp jtg-animated']" v-for="event in events">
                             <div class="jtg-event-entry align-self-stretch">
-                                <a :href="'/events/' + event.id" class="block-20" :style="{ 'background-image': 'url(' + event.image_src + ')'}"></a>
+                                <a :href="'/events/' + event.hash_id" class="block-20" :style="{ 'background-image': 'url(' + event.image_src + ')'}"></a>
                                 <div class="text p-4 d-block">
                                     <h3 class="heading mb-1 text-center">
                                         <a :href="'/events/' + event.hash_id">{{ event.name }}</a>
