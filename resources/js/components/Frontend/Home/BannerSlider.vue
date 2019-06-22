@@ -12,13 +12,13 @@
                       v-lazy:background-image="img"
                       :style="'background-color: ' + ['#373a3e'][i % 2]">
             <div slot="slideContent">
-                <!--<h6>-->
-                    <!--BE INFORMED-->
-                <!--</h6>-->
-                <!--<a class="btn text-white py-3 px-4" style="font-size: 60px; letter-spacing: 1px; font-weight: 600;" href="/about/vision">-->
-                    <!--BE INFORMED.-->
-                    <!--STAY-->
-                <!--</a>-->
+                <div class="mouse2">
+                    <h1 class="mb-0"></h1>
+
+                    <a href="#" class="mouse-icon">
+                        <div class="mouse-wheel"><i class="fa fa-chevron-circle-down"></i></div>
+                    </a>
+                </div>
             </div>
         </vueper-slide>
     </vueper-slides>
@@ -41,32 +41,6 @@
         position: relative;
         z-index: 1;
     }
-    .welcome-text h2 {
-        font-weight: 700;
-        font-size: 82px;
-        display: block;
-        margin-bottom: 0;
-        background: -webkit-linear-gradient(#ff9696, #ffe89e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .welcome-text p {
-        color: #fff;
-        margin-bottom: 50px;
-        display: block;
-    }
-    .welcome-text .hero-mail-contact {
-        color: #fff;
-        font-style: italic;
-        text-decoration: underline;
-    }
-    .welcome-text .hero-mail-contact:hover {
-        color: #fc6060;
-    }
-    .welcome-text .hero-mail-contact:focus {
-        color: #fc6060;
-    }
-
 </style>
 
 <script>

@@ -1,5 +1,5 @@
 <div id="jtg-loader" class="show fullscreen">
-    <img src="{{ $img }}" style="width: 400px; height: 400px" alt="" class="loader-image">
+    <img src="{{ $img }}" alt="" class="loader-image">
 </div>
 
 {{--<div id="preloader" class="show">--}}

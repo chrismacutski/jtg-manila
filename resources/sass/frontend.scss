@@ -584,6 +584,79 @@ h1, h2, h3, h4, h5,
     }
   }
 
+
+.mouse2{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6em;
+  z-index: 99;
+}
+.mouse-icon{
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255,255,255,0);
+  // border-radius: 15px;
+  @include border-radius(50%);
+  //background: rgba(255,255,255,.4);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.mouse-wheel{
+  height: 30px;
+  margin: 2px -30px;
+  display: block;
+  width: 30px;
+  background: transparent;
+  @include border-radius(50%);
+  -webkit-animation: 1.6s ease infinite wheel-up-down;
+  -moz-animation: 1.6s ease infinite wheel-up-down;
+  animation: 1.6s ease infinite wheel-up-down;
+  color: $white;
+  font-size: 60px;
+  font-weight: bolder;
+}
+@-webkit-keyframes wheel-up-down {
+  0% {
+    margin-top: 2px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+}@-moz-keyframes wheel-up-down {
+   0% {
+     margin-top: 2px;
+     opacity: 1;
+   }
+   30% {
+     opacity: 1;
+   }
+   100% {
+     margin-top: 20px;
+     opacity: 0;
+   }
+ }@keyframes wheel-up-down {
+    0% {
+      margin-top: 2px;
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+  }
+
 .slider-text{
   h1 {
     font-size: 60px;
