@@ -7,8 +7,8 @@
                     <p class="text-white">Christ is our Vision! Making Disciples is our Mission!</p>
                     <ul class="jtg-footer-social list-unstyled mt-5">
                         {{--<li class="jtg-animate"><a href="#"><span class="icon-twitter"></span></a></li>--}}
-                        <li class="jtg-animate"><a href="https://www.facebook.com/jesusthegospelmanilachurch/" target="_blank"><span class="icon-facebook"></span></a></li>
-                        <li class="jtg-animate"><a href="https://www.youtube.com/channel/UCWHMTaBhsLamibBIjqBDvUg" target="_blank"><span class="icon-youtube"></span></a></li>
+                        <li class="jtg-animate"><a href="https://www.facebook.com/jesusthegospelmanilachurch/" target="_blank"><span class="fa fa-facebook-f"></span></a></li>
+                        <li class="jtg-animate"><a href="https://www.youtube.com/channel/UCWHMTaBhsLamibBIjqBDvUg" target="_blank"><span class="fa fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>
