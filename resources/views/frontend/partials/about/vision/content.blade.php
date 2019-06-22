@@ -4,7 +4,7 @@
             <section class="jtg-vision bg-darker">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 p-5">
+                        <div class="col-md-12 py-5">
                             <h3 class="jtg-animate mb-0">CHRIST IS THE VISION</h3>
                             <h5 class="jtg-animate mb-5">JTG MANILA CHURCH VISION IS TO BE LIKE CHRIST</h5>
                             <p class="jtg-animate text-justify" style="white-space: pre-line">
@@ -28,7 +28,7 @@
             <section class="jtg-vision bg-darker-light">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 p-5">
+                        <div class="col-md-12 py-5">
                             <h3 class="jtg-animate">MAKING DISCIPLES IS OUR MISSION</h3>
                             <p class="jtg-animate text-justify" style="white-space: pre-line">
                                 To see our Church stepping in fulfilling the Great Commission <span style="font-size: 20px"><strong><i>"God and Make Disciples of all Nation"</i></strong></span> — The Church Mandate.<span style="font-size: 20px"><strong> (Matthew 28:19-20)</strong></span>
@@ -49,7 +49,7 @@
             <section class="jtg-vision bg-darker">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 p-5">
+                        <div class="col-md-12 py-5">
                             <h3 class="jtg-animate">Goals</h3>
                             <p class="jtg-animate text-justify" style="white-space: pre-line">
                                 From members to Leaders in spite of the age and gender are sharing the Gospel of Jesus Christ in whatever places they may been.
@@ -70,7 +70,7 @@
             <section class="jtg-vision bg-darker-light">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 p-5">
+                        <div class="col-md-12 py-5">
                             <h3 class="jtg-animate">M4DC</h3>
                             <p class="jtg-animate text-justify font-weight-bold" style="white-space: pre-line; font-size: 20px;">
                                Making disciples for Church
@@ -92,7 +92,7 @@
             <section class="jtg-vision bg-darker">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-12 p-5">
+                        <div class="col-md-12 py-5">
                             <h3 class="jtg-animate">OUR SLOGAN</h3>
                             <h5 class="jtg-animate mb-5">Where Christ is REAL and Disciples are MADE –</h5>
                         </div>
