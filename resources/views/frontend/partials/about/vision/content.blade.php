@@ -43,6 +43,28 @@
     </div>
 </div>
 
+<div class="container-fluid bg-darker-light">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="jtg-vision bg-darker-light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 py-5">
+                            <h3 class="jtg-animate">MD4C</h3>
+                            <p class="jtg-animate text-justify font-weight-bold" style="white-space: pre-line; font-size: 20px;">
+                               Making disciples for Church
+                                Making disciples for Community
+                                Making disciples for City
+                                Making disciples for Country
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid bg-darker">
     <div class="row">
         <div class="col-md-12">
@@ -55,29 +77,6 @@
                                 From members to Leaders in spite of the age and gender are sharing the Gospel of Jesus Christ in whatever places they may been.
 
                                 To start a revolution who will disciple the next generation and will win the multitude for Jesus Christ. Our church will have the passion and burden to support the missionary works.                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
-
-
-<div class="container-fluid bg-darker-light">
-    <div class="row">
-        <div class="col-md-12">
-            <section class="jtg-vision bg-darker-light">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-12 py-5">
-                            <h3 class="jtg-animate">M4DC</h3>
-                            <p class="jtg-animate text-justify font-weight-bold" style="white-space: pre-line; font-size: 20px;">
-                               Making disciples for Church
-                                Making disciples for Community
-                                Making disciples for City
-                                Making disciples for Country
-                            </p>
                         </div>
                     </div>
                 </div>

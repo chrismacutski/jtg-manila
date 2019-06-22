@@ -23,10 +23,10 @@
                 @else
                     <li class="nav-item"><a href="/" class="nav-link">HOME</a></li>
                 @endif
-                @if(url()->current() == url()->route('frontend.about.vision'))
-                    <li class="nav-item active"><a href="{{ route('frontend.about.vision') }}" class="nav-link">ABOUT</a></li>
+                @if(url()->current() == url()->route('frontend.about.history'))
+                    <li class="nav-item active"><a href="{{ route('frontend.about.history') }}" class="nav-link">ABOUT</a></li>
                 @else
-                    <li class="nav-item"><a href="{{ route('frontend.about.vision') }}" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="{{ route('frontend.about.history') }}" class="nav-link">ABOUT</a></li>
                 @endif
                 {{--<li class="nav-item"><a href="#" class="nav-link">Ministries</a></li>--}}
                 @if(url()->current() == url()->route('series.index'))
@@ -40,10 +40,10 @@
                     <li class="nav-item"><a href="{{ route('events.index') }}" class="nav-link">EVENTS</a></li>
                 @endif
 
-                @if(url()->current() == url()->route('frontend.contact'))
-                    <li class="nav-item active"><a href="{{ route('frontend.contact') }}" class="nav-link">GIVING</a></li>
+                @if(url()->current() == url()->route('frontend.give'))
+                    <li class="nav-item active"><a href="{{ route('frontend.give') }}" class="nav-link">GIVING</a></li>
                 @else
-                    <li class="nav-item"><a href="{{ route('frontend.contact') }}" class="nav-link">GIVING</a></li>
+                    <li class="nav-item"><a href="{{ route('frontend.give') }}" class="nav-link">GIVING</a></li>
                 @endif
 
                 @if(url()->current() == url()->route('frontend.contact'))

@@ -455,17 +455,17 @@ h1, h2, h3, h4, h5,
   @include media-breakpoint-down(md){
     background-position: center center !important;
   }
-  .overlay{
-    position: absolute;
-    // width: 50%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: .5;
-    background: $black;
-  }
+  //.overlay{
+  //  position: absolute;
+  //  // width: 50%;
+  //  top: 0;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  content: '';
+  //  opacity: .5;
+  //  background: $black;
+  //}
   &.hero-wrap-2{
     height: 600px;
     .overlay{
@@ -496,7 +496,7 @@ h1, h2, h3, h4, h5,
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .8;
+    opacity: .2;
     background: #212529;
   }
   &.hero-wrap-2{
@@ -516,7 +516,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -6em;
+  bottom: -16em;
   z-index: 99;
 }
 .mouse-icon{
@@ -589,10 +589,10 @@ h1, h2, h3, h4, h5,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -6em;
+  bottom: -18em;
   z-index: 99;
 }
-.mouse-icon{
+.mouse-icon2{
   width: 60px;
   height: 60px;
   border: 1px solid rgba(255,255,255,0);
@@ -605,7 +605,7 @@ h1, h2, h3, h4, h5,
   margin: 0 auto;
   display: block;
 }
-.mouse-wheel{
+.mouse-wheel2{
   height: 30px;
   margin: 2px -30px;
   display: block;
@@ -677,7 +677,7 @@ h1, h2, h3, h4, h5,
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
-    color: rgba(255,255,255,.8);
+    color: rgba(0,0,0,.8);
     letter-spacing: 1px;
   }
   p {

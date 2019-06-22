@@ -105,6 +105,9 @@ Vue.component('login', require('./components/Login.vue').default);
 
 Vue.component('conversations-list', require('./components/Chat.vue').default);
 
+Vue.component('giving-banner', require('./components/Giving/Banner.vue').default);
+Vue.component('giving-form', require('./components/Giving/Form.vue').default);
+
 import SweetModal from "sweet-modal-vue/src/plugin.js";
 
 Vue.use(SweetModal);

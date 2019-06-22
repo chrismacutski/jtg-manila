@@ -1,4 +1,4 @@
-<div class="hero-wrap2" style="background-image: url({{ $sermon_img }})" data-stellar-background-ratio="0.5">
+<div class="hero-wrap" style="background-image: url({{ $sermon_img }})" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">

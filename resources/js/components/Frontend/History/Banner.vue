@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="hero-wrap js-fullheight" v-lazy:background-image="image" :style="{'height' : fullheight}"  data-stellar-background-ratio="0.5">
+        <div class="hero-wrap2 js-fullheight" v-lazy:background-image="image" :style="{'height' : fullheight}"  data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div :style="{ 'height' : fullheight}" class="row no-gutters slider-text2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-10 text-center jtg-animate" data-scrollax="properties: { translateY: '70%' }">
-                        <h1 class="mb-0">OUR STORY</h1>
+                        <h1 class="mb-0">OUR HISTORY</h1>
                         <!--<h3 class="subheading mb-4 pb-1">On March 2009, Blenn and Manel launched the 1st JTG Manila Church Service with only 5 people and since then by the grace of God, it never stops growing.</h3>-->
 
                         <div class="mouse">

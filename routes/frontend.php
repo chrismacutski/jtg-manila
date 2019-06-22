@@ -5,6 +5,7 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('/contact', 'ContactController@index')->name('frontend.contact');
+    Route::get('/give', 'GivingController@index')->name('frontend.give');
 });
 
 Route::namespace('Frontend\About')->prefix('about')->group(function () {

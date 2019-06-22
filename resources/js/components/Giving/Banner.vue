@@ -4,10 +4,9 @@
         <div class="container">
             <div :style="{'height' : fullheight}" class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                 <div class="col-md-10 text-center jtg-animate" data-scrollax=" properties: { translateY: '70%' }">
-                    <!--<h1 class="mb-0">ABOUT US</h1>-->
-                    <!--<h3 class="subheading mb-4 pb-1">Christ is the Vision Making Disciples is our Mission</h3>-->
+                    <h1 class="mb-0">GIVING</h1>
 
-                    <div class="mouse2">
+                    <div class="mouse">
                         <a href="#" class="mouse-icon">
                             <div class="mouse-wheel"><span class="fa fa-chevron-circle-down"></span></div>
                         </a>

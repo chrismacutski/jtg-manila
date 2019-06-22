@@ -13,10 +13,8 @@
                       :style="'background-color: ' + ['#373a3e'][i % 2]">
             <div slot="slideContent">
                 <div class="mouse2">
-                    <h1 class="mb-0"></h1>
-
-                    <a href="#" class="mouse-icon">
-                        <div class="mouse-wheel"><i class="fa fa-chevron-circle-down"></i></div>
+                    <a href="#" class="mouse-icon2">
+                        <div class="mouse-wheel2"><i class="fa fa-chevron-circle-down"></i></div>
                     </a>
                 </div>
             </div>
