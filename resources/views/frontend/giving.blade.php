@@ -1,7 +1,7 @@
 
 @extends('layouts.frontend')
 
-@section('title', 'Contact')
+@section('title', 'Giving')
 
 @section('content')
     <giving-banner :image="{{ json_encode('/images/giving.jpg') }}"></giving-banner>
