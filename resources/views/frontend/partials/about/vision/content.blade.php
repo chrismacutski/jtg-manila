@@ -84,20 +84,3 @@
         </div>
     </div>
 </div>
-
-<div class="container-fluid bg-darker">
-    <div class="row">
-        <div class="col-md-12">
-            <section class="jtg-vision bg-darker">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-12 py-5">
-                            <h3 class="jtg-animate">OUR SLOGAN</h3>
-                            <h5 class="jtg-animate mb-5">Where Christ is REAL and Disciples are MADE –</h5>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</div>
