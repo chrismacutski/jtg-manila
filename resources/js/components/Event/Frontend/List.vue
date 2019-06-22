@@ -97,9 +97,9 @@
                 let starting_at = moment(event.starting_at, 'YYYY-MM-DD');
                 let ending_at = moment(event.ending_at, 'YYYY-MM-DD');
                 if (starting_at == ending_at) {
-                    return moment(event.starting_at).format('MMMM DD') + ' @ ' + moment(event.starting_at).format('hh:ssa');
-                } else {
                     return moment(event.starting_at).format('MMMM DD') + ' - ' + moment(event.ending_at).format('MMMM DD YYYY');
+                } else {
+                    return moment(event.starting_at).format('MMMM DD') + ' @ ' + moment(event.starting_at).format('hh:ssa');
                 }
             },
 

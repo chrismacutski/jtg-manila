@@ -21,7 +21,7 @@
                             <p class="time-loc text-center">
                             <h6 class="mr-2 font-weight-bold text-center">
                                 @if ($event->starting_at->format('Y-m-d') == $event->ending_at->format('Y-m-d'))
-                                    {{ $event->starting_at->format('M d') }} @ {{ $event->starting_at->format('g:iA') }} - {{ $event->starting_at->format('g:iA') }}
+                                    {{ $event->starting_at->format('M d') }} @ {{ $event->starting_at->format('g:iA') }} - {{ $event->ending_at->format('g:iA') }}
                                 @else
                                     {{ $event->starting_at->format('M d') }} - {{ $event->ending_at->format('M d Y') }}
                                 @endif

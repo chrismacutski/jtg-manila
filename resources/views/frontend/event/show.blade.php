@@ -27,7 +27,7 @@
                                         <div class="text">
                                             <h3 class="heading"><a href="#">START</a></h3>
                                             <div class="meta">
-                                                <div><a href="#"><span class="icon-calendar"></span> {{ $event->starting_at->format('M d Y') }}</a></div>
+                                                <div><a href="#"><span class="icon-calendar"></span> {{ $event->starting_at->format('M d Y H:iA') }}</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                                         <div class="text">
                                             <h3 class="heading"><a href="#">END</a></h3>
                                             <div class="meta">
-                                                <div><a href="#"><span class="icon-calendar"></span> {{ $event->ending_at->format('M d Y') }}</a></div>
+                                                <div><a href="#"><span class="icon-calendar"></span> {{ $event->ending_at->format('M d Y H:iA') }}</a></div>
                                             </div>
                                         </div>
                                     </div>
