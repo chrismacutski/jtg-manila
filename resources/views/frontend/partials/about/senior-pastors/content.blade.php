@@ -1,23 +1,16 @@
 <div class="container">
-    {{--<div class="row justify-content-center mb-5 py-5">--}}
-        {{--<div class="col-md-12 text-center heading-section jtg-animate">--}}
-            {{--<h2 class="mb-2"><span class="px-4">OUR SENIOR PASTORS</span></h2>--}}
-            {{--<span class="subheading">Church Services</span>--}}
-        {{--</div>--}}
-    {{--</div>--}}
     <div class="row mt-5">
         <div class="col-md-12 text-center heading-section jtg-animate">
             <h2 class="mb-2"><span class="px-4">OUR SENIOR PASTORS</span></h2>
-            {{--<span class="subheading">Church Services</span>--}}
         </div>
         <div class="col-md-12">
             <div class="staff-entry2 cf2 jtg-animate">
-                <img height="120px"  alt=""  sizes="(max-width: 500px) 100vw, 500px">	<div class="staff-meta">
-                <h5>Blenn Ramos</h5>
-                <ul style="padding: 0; list-style: none">
-                    <li>Senior Pastor</li>
-                    {{--<li><a href="mailto:raristy@goodnews.church" title="Email Rafael Aristy">raristy@goodnews.church</a></li>--}}
-                </ul>
+                <img height="120px" class="avatar" src="/images/pastor2.jpg"  alt=""  sizes="(max-width: 500px) 100vw, 500px">
+                <div class="staff-meta">
+                    <h5>Blenn Ramos</h5>
+                    <ul style="padding: 0; list-style: none">
+                        <li>Senior Pastor</li>
+                    </ul>
                 </div>
                 <div class="bio small" id="bio">
                     <p>
@@ -26,11 +19,10 @@
                 </div>
             </div>
             <div class="staff-entry2 cf jtg-animate">
-                <img height="120px"  alt=""  sizes="(max-width: 500px) 100vw, 500px">	<div class="staff-meta">
+                <img height="120px" class="avatar" src="/images/pastor1.jpg" alt=""  sizes="(max-width: 500px) 100vw, 500px">	<div class="staff-meta">
                 <h5>Marienelle Anne Bernabe-Ramos</h5>
                 <ul style="padding: 0; list-style: none">
                     <li>Senior Pastor</li>
-                    {{--<li><a href="mailto:raristy@goodnews.church" title="Email Rafael Aristy">raristy@goodnews.church</a></li>--}}
                 </ul>
                 </div>
                 <div class="bio2 small" id="bio">

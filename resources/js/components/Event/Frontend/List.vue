@@ -19,7 +19,7 @@
                                 <a :href="'/events/' + event.id" class="block-20" :style="{ 'background-image': 'url(' + event.image_src + ')'}"></a>
                                 <div class="text p-4 d-block">
                                     <h3 class="heading mb-1 text-center">
-                                        <a :href="'/events/' + event.id">{{ event.name }}</a>
+                                        <a :href="'/events/' + event.hash_id">{{ event.name }}</a>
                                     </h3>
                                     <p class="time-loc text-center">
                                         <!--<h6 class="mr-2 font-weight-bold text-center">-->
