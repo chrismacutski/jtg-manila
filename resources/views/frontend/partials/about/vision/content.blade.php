@@ -43,10 +43,10 @@
     </div>
 </div>
 
-<div class="container-fluid bg-darker-light">
+<div class="container-fluid bg-darker">
     <div class="row">
         <div class="col-md-12">
-            <section class="jtg-vision bg-darker-light">
+            <section class="jtg-vision bg-darker">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-12 py-5">
@@ -65,10 +65,10 @@
     </div>
 </div>
 
-<div class="container-fluid bg-darker">
+<div class="container-fluid bg-darker-light">
     <div class="row">
         <div class="col-md-12">
-            <section class="jtg-vision bg-darker">
+            <section class="jtg-vision bg-darker-light">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-12 py-5">
