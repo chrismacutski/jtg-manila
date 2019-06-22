@@ -15,7 +15,7 @@
                                         <div>
                                         </div>
                                     </h3>
-                                    <p class="jtg-animate text-justify" style="white-space: pre-line" v-html="sermon.content">
+                                    <p class="jtg-animate" style="white-space: pre-line" v-html="sermon.content">
                                     </p>
 
                                     <a v-if="sermon.file_src" :href="sermon.file_src" target="_blank" class="btn btn-transparent py-3 px-4 jtg-animate d-flex justify-content-center">DOWNLOAD MESSAGE</a>
