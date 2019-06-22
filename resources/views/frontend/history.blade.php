@@ -9,7 +9,8 @@
         {{--'history_banner_img' =>  '/images/bg_4.jpg'--}}
     {{--])--}}
 
-    @include('frontend.partials.about.nav')
-
+    @include('frontend.partials.about.nav', [
+        'title' => 'OUR HISTORY'
+    ])
     @include('frontend.partials.about.history.content')
 @stop

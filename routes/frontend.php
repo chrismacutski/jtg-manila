@@ -13,8 +13,10 @@ Route::namespace('Frontend\About')->prefix('about')->group(function () {
     Route::get('/history', 'HistoryController@index')->name('frontend.about.history');
     Route::get('/senior-pastors', 'SeniorPastorsController@index')->name('frontend.about.senior-pastors');
     Route::get('/ministries', 'MinistriesController@index')->name('frontend.about.ministries');
+    Route::get('/departments', 'DepartmentsController@index')->name('frontend.about.departments');
     Route::get('/others', 'OthersController@index')->name('frontend.about.others');
     Route::get('/real-made-teachings', 'RealMadeTeachingsController@index')->name('frontend.about.real-made-teachings');
+    Route::get('/what-we-believe', 'WhatWeBelieveController@index')->name('frontend.about.what-we-believe');
 });
 
 Route::resource('series', 'SeriesController');

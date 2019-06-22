@@ -34,6 +34,9 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 
 import 'vueperslides/dist/vueperslides.css'
 
+import VueNavigationBar from 'vue-navigation-bar'
+Vue.component('vue-navigation-bar', VueNavigationBar)
+
 Vue.component('timer', require('./components/Timer.vue').default);
 Vue.component('contact-form', require('./components/Contact/Form.vue').default);
 Vue.component('event-form', require('./components/Event/Form.vue').default);
@@ -84,6 +87,7 @@ Vue.component('frontend-series-list', require('./components/Series/Frontend/List
 Vue.component('home-who-whe-are', require('./components/Frontend/Home/WhoWeAre.vue').default);
 Vue.component('home-map', require('./components/Frontend/Home/Map.vue').default);
 
+Vue.component('about-nav', require('./components/Frontend/About/Nav.vue').default);
 Vue.component('about-history', require('./components/Frontend/About/History.vue').default);
 Vue.component('about-leadership', require('./components/Frontend/About/Leadership.vue').default);
 Vue.component('about-ministries', require('./components/Frontend/About/Ministries.vue').default);
@@ -91,7 +95,9 @@ Vue.component('about-ministry-list', require('./components/Frontend/About/Minist
 Vue.component('about-mission-vision', require('./components/Frontend/About/MissionVision.vue').default);
 Vue.component('about-real-made-system', require('./components/Frontend/About/RealMadeSystem.vue').default);
 Vue.component('about-senior-pastors', require('./components/Frontend/About/SeniorPastors.vue').default);
-
+Vue.component('about-departments', require('./components/Frontend/About/Departments.vue').default);
+Vue.component('about-department-list', require('./components/Frontend/About/DepartmentList.vue').default);
+Vue.component('about-what-we-believe', require('./components/Frontend/About/WhatWeBelieve.vue').default);
 
 import SweetModal from "sweet-modal-vue/src/plugin.js";
 

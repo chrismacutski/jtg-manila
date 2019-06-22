@@ -7,6 +7,10 @@ use App\JTG\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
+use Symfony\Component\Process\Process;
+
 
 class EventsController extends Controller
 {
@@ -85,6 +89,9 @@ class EventsController extends Controller
                     $file_path = $image_src->storePubliclyAs('events/' . $event->id, 'image_src_' . $event->id . '.' .$image_src->getClientOriginalExtension(), 'public');
 
                     $event->image_src = $file_path;
+                    $image_resize = Image::make($image_src->getRealPath());
+                    $image_resize->resize(1440, 760);
+                    $image_resize->save(storage_path('app/public/' . $file_path));
                 }
             }
 
@@ -95,6 +102,10 @@ class EventsController extends Controller
                     $file_path = $image_thumbnail_src->storePubliclyAs('events/' . $event->id, 'image_thumbnail_src' . $event->id . '.' . $image_thumbnail_src->getClientOriginalExtension(), 'public');
 
                     $event->image_thumbnail_src = $file_path;
+
+                    $image_resize = Image::make($image_thumbnail_src->getRealPath());
+                    $image_resize->resize(1440, 760);
+                    $image_resize->save(storage_path('app/public/' . $file_path));
                 }
             }
             $event->attachHeaderText(request('header_text', ''));
@@ -104,6 +115,7 @@ class EventsController extends Controller
 
             $event->save();
         } catch (\Exception $e) {
+            logger($e->getMessage());
             abort(500, $e->getMessage());
         }
     }

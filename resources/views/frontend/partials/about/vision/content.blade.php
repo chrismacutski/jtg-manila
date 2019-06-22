@@ -4,12 +4,15 @@
             <section class="jtg-vision bg-darker">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-10 p-5">
-                            <h3 class="jtg-animate">Lorem Ipsum</h3>
+                        <div class="col-md-12 p-5">
+                            <h3 class="jtg-animate mb-0">CHRIST IS THE VISION</h3>
+                            <h5 class="jtg-animate mb-5">JTG MANILA CHURCH VISION IS TO BE LIKE CHRIST</h5>
                             <p class="jtg-animate text-justify" style="white-space: pre-line">
-                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                <span style="font-size: 20px"><strong>1 John 3:2</strong></span> - But we know that <span style="font-size: 20px"><strong><i>when Christ appears, we shall be like him,</i></strong></span> for we shall see him as he is.
 
-                                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                                The goal of the Christian life is to be like Christ for Christlikeness is the purpose of God for the people of God.
+
+                                <span style="font-size: 20px"><strong>Romans 8:29</strong></span> - For God knew his people in advance, and <span style="font-size: 20px"><strong><i>he chose them to become like his Son</i></strong></span>.
                             </p>
                         </div>
                     </div>
@@ -25,13 +28,73 @@
             <section class="jtg-vision bg-darker-light">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-10 p-5">
-                            <h3 class="jtg-animate">Lorem Ipsum</h3>
+                        <div class="col-md-12 p-5">
+                            <h3 class="jtg-animate">MAKING DISCIPLES IS OUR MISSION</h3>
                             <p class="jtg-animate text-justify" style="white-space: pre-line">
-                                Donec eget arcu luctus felis finibus ultrices. Quisque tellus ante, vehicula ut molestie quis, semper hendrerit nisl. Sed consequat facilisis tortor vitae posuere. Aliquam quis sodales felis, eu vestibulum neque. Suspendisse risus tellus, placerat quis viverra id, imperdiet sit amet nisi. Phasellus ut nunc nec mi molestie porttitor. Sed tristique risus nisl, vitae lacinia odio aliquet ut. Fusce facilisis, turpis vel posuere porta, lacus nisl lacinia diam, ac commodo felis turpis ac tortor. Aliquam ullamcorper in enim a consectetur. Donec tincidunt ut metus ac maximus.
+                                To see our Church stepping in fulfilling the Great Commission <span style="font-size: 20px"><strong><i>"God and Make Disciples of all Nation"</i></strong></span> — The Church Mandate.<span style="font-size: 20px"><strong> (Matthew 28:19-20)</strong></span>
 
-                                Curabitur semper odio non blandit posuere. Nulla sem dolor, condimentum at ornare sed, auctor eget nulla. Cras pharetra varius lacus, id interdum ligula feugiat sed. Nulla facilisi. Quisque est risus, ullamcorper a pellentesque id, efficitur sed sapien. Etiam mollis finibus metus a molestie. Pellentesque semper mattis pharetra. Nam euismod, arcu vel vestibulum pharetra, erat leo mollis sapien, eu aliquet lorem ante eget lacus. Sed sed semper nisl. Vestibulum dignissim eros orci, et pretium augue rhoncus quis. Donec condimentum turpis sed nunc fermentum aliquet. Nullam nisl augue, dictum id quam nec, venenatis pellentesque enim. Nulla suscipit orci dignissim, molestie sem sit amet, porta mi. Sed velit nisl, maximus at diam non, ornare sagittis magna. Fusce efficitur eros sem, ut dictum tortor iaculis rhoncus.
+                                To send missionaries all around the Philippines and abroad to start churches and community churches for the glory of God. <span style="font-size: 20px"><strong>(Acts 1:8)</strong></span>
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-darker">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="jtg-vision bg-darker">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 p-5">
+                            <h3 class="jtg-animate">Goals</h3>
+                            <p class="jtg-animate text-justify" style="white-space: pre-line">
+                                From members to Leaders in spite of the age and gender are sharing the Gospel of Jesus Christ in whatever places they may been.
+
+                                To start a revolution who will disciple the next generation and will win the multitude for Jesus Christ. Our church will have the passion and burden to support the missionary works.                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid bg-darker-light">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="jtg-vision bg-darker-light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 p-5">
+                            <h3 class="jtg-animate">M4DC</h3>
+                            <p class="jtg-animate text-justify font-weight-bold" style="white-space: pre-line; font-size: 20px;">
+                               Making disciples for Church
+                                Making disciples for Community
+                                Making disciples for City
+                                Making disciples for Country
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-darker">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="jtg-vision bg-darker">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 p-5">
+                            <h3 class="jtg-animate">OUR SLOGAN</h3>
+                            <h5 class="jtg-animate mb-5">Where Christ is REAL and Disciples are MADE –</h5>
                         </div>
                     </div>
                 </div>

@@ -5,8 +5,8 @@
             <div class="container">
                 <div :style="{ 'height' : fullheight}" class="row no-gutters slider-text2 js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                     <div class="col-md-10 text-center jtg-animate" data-scrollax="properties: { translateY: '70%' }">
-                        <h1 class="mb-0">HISTORY</h1>
-                        <!--<h3 class="subheading mb-4 pb-1">Our history has molded us into who we are today.</h3>-->
+                        <h1 class="mb-0">OUR STORY</h1>
+                        <!--<h3 class="subheading mb-4 pb-1">On March 2009, Blenn and Manel launched the 1st JTG Manila Church Service with only 5 people and since then by the grace of God, it never stops growing.</h3>-->
 
                         <div class="mouse">
                             <a href="#" class="mouse-icon">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <sweet-modal width="100%" ref="modal" modal-theme="dark" overlay-theme="dark" @close="closeModal" class="sModalHistory">
-            <strong>History</strong>
+            <strong>OUR STORY</strong>
             <br/><br/>
 
             <template v-if="windowWidth != ''">
