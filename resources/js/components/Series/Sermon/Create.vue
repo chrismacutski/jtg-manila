@@ -2,7 +2,7 @@
     <div class="container">
         <form @submit.prevent="onCreate">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8 offset-2">
                     <div class="card">
                         <div class="card-header bg-darker text-white">
                             <h6 class="text-center text-white">NEW SERMON</h6>
@@ -204,7 +204,7 @@
 
                 axios.post(`/admin/series/${this.series.hash_id}/sermons`, params)
                     .then(({data}) => {
-//                        window.location.href = '/admin/series/' +  data.id + '/sermons/create';
+                        window.location.href = '/admin/series';
                     }).catch(error => {
                     if (error.response.data.errors) {
                         this.errors = error.response.data.errors;

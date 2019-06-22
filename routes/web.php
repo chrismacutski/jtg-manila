@@ -59,4 +59,6 @@ Route::namespace('Admin')->group(function () {
     Route::post('admin/series', 'SeriesController@store');
     Route::post('admin/series/{series}/delete', 'SeriesController@destroy')->name('admin.series.destroy');
     Route::post('admin/series/{series}/publish', 'SeriesController@publish')->name('admin.series.publish');
+
+    Route::get('admin/conversations', 'ChatController@index')->name('admin.conversations.index');
 });

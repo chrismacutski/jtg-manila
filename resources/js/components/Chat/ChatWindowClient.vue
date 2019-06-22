@@ -241,7 +241,6 @@
                 messages: collect([]),
                 chatter: null,
                 admin: null,
-                department_name: null,
                 queue_position: null,
 
                 conversation_url: '',
@@ -329,7 +328,6 @@
 
                         this.queue_position = data.queue_position;
 
-                        this.department_name = data.department.name;
                         this.conversation_url = data.link;
                     })
                     .catch(error => {
@@ -381,7 +379,6 @@
                 this.queue_position = data.payload.queue_position;
                 this.was_closed = false;
 
-                this.department_name = data.payload.concern;
                 this.conversation_url = data.payload.link;
 
                 this.messageHasAdminReply();

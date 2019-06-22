@@ -45,13 +45,20 @@
                             <ul class="navbar-nav mr-auto">
 
                                 @if (auth()->user()->hasAnyPermission([
+                                    'manage-events'
+                                ]))
+                                    <li class="nav-item d-flex align-items-center">
+                                        <a class="nav-link" href="{{ route('admin.conversations.index') }}">Messages</a>
+                                    </li>
+                                @endif
+
+                            @if (auth()->user()->hasAnyPermission([
                                     'manage-series'
                                 ]))
                                     <li class="nav-item d-flex align-items-center">
                                         <a class="nav-link" href="{{ route('admin.series.index') }}">Series</a>
                                     </li>
                                 @endif
-
                                 @if (auth()->user()->hasAnyPermission([
                                     'manage-events'
                                 ]))
@@ -85,9 +92,15 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
+
+    <script>
+        window.AppUser = {!! json_encode([
+            'user' => auth()->user()
+        ]) !!};
+    </script>
 </body>
 </html>

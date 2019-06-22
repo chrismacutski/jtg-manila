@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\CreateSeriesRequest;
 use App\JTG\Event;
 use App\Series;
 use Illuminate\Http\Request;
@@ -62,7 +63,7 @@ class SeriesController extends Controller
         return view('admin.series.create');
     }
 
-    public function store()
+    public function store(CreateSeriesRequest $request)
     {
         try {
             /** @var Series $series */

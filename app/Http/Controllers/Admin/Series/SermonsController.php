@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Series;
 
+use App\Http\Requests\CreateSeriesSermonRequest;
 use App\Series;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,7 +15,7 @@ class SermonsController extends Controller
             ->with('series', $series);
     }
 
-    public function store(Series $series)
+    public function store(Series $series, CreateSeriesSermonRequest $request)
     {
         try {
             $sermon = $series->attachSermon(request()->only('sermon_speaker_id', 'name', 'description', 'content', 'happened_at', 'video_src', 'file_src'));

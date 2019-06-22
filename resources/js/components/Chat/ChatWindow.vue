@@ -1,117 +1,44 @@
 <template>
     <div class="card" style="height: 90vh;">
-        <template v-if="show_chat_window">
-            <template v-if="customer">
-                <div class="card-header bg-dark text-white">
-                    <div class="small text-center">
-                        {{ conversation.received_at | setDateTime }}
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="small">
-                            <b v-if="conversation">Chat ID: {{ conversation.id }}</b> <br>
-                            <button @click="show_chat_window = false" type="button" class="btn btn-sm text-primary p-0">
-                                <i class="fa fa-pencil"></i>
-                                <b>{{ customer.nickname }}</b>
-                            </button> <br>
-                            <b>{{ campaignLabel }} : {{ customer.identifier }}</b> <br>
-                            <b>Email : </b> {{ customer.email_address }}<br>
-                            <b>Contact Number : </b> {{ customer.phone_number }}<br>
-                            <b>Location : </b> {{ customer.location }}<br>
-                            <b>Concern : </b> {{ department_name }}<br>
-                            <b>Sent Transcript of Conversation : </b> {{ conversation.times_transcript_was_sent | transcriptWasSent }}<br>
-                        </div>
-                        <close-conversation :conversation="conversation"
-                                            :agent="agent"></close-conversation>
-                    </div>
+        <message-list v-model="messages"
+                      :queue-position="queue_position"
+                      :session-id="value"
+                      :author="author"
+                      :was-closed="was_closed"
+                      :chatter="chatter"
+                      :conversation="conversation"
+                      :has-reply="has_reply"
+                      :is-connected="is_connected"
+                      :hide-queue-position="hideQueuePosition"></message-list>
 
-                    <template v-if="show_action_buttons">
-                        <div class="d-flex justify-content-between">
-                            <!--<create-crm-interaction :conversation="conversation"-->
-                                                    <!--:agent="agent"></create-crm-interaction>-->
-
-                            <email-transcript :conversation="conversation"
-                                              :agent="agent"></email-transcript>
-                        </div>
-                    </template>
-                    <template v-else>
-                        <div class="d-flex justify-content-end">
-                            <button @click="show_action_buttons = true" type="button" class="btn btn-sm btn-primary pt-0 pb-0 pr-3 pl-3">
-                                <h5 class="text-center">...</h5>
-                            </button>
-                        </div>
-                    </template>
-                </div>
-            </template>
-            <message-list v-model="messages"
-                          :queue-position="queue_position"
-                          :session-id="value"
-                          :author="author"
-                          :campaign-name="campaignName"
-                          :campaign-label="campaignLabel"
-                          :was-closed="was_closed"
-                          :customer="customer"
-                          :department-name="department_name"
-                          :conversation="conversation"
-                          :has-agent-reply="has_agent_reply"
-                          :is-connected="is_connected"
-                          :hide-queue-position="hideQueuePosition"></message-list>
-
-            <div class="card-footer p-0">
-                <user-input @new-message="submit"
-                            :author="author"
-                            :origin="origin"></user-input>
-            </div>
-        </template>
-        <template v-else>
-            <div class="card-header bg-dark text-white">
-                <div class="d-flex justify-content-between">
-                    <span>Edit Customer Details</span>
-                </div>
-            </div>
-            <div class="card-body overflow-auto d-flex flex-column">
-                <customer-edit :data="customer"
-                               :session-id="value"
-                               :campaign-label="campaignLabel"
-                               :should-require-concern="false"
-                               @updated-customer="updateCustomerDetails"
-                               @back-to-chat="show_chat_window = true"></customer-edit>
-            </div>
-        </template>
+        <div class="card-footer p-0">
+            <user-input @new-message="submit"
+                        :author="author"></user-input>
+        </div>
     </div>
 </template>
 
 <script>
-    import UserInput from './Chat/ChatWindow/UserInput.vue'
-    import MessageList from './Chat/ChatWindow/MessageList.vue'
-    import CloseConversation from '../components/Conversation/Close.vue'
-    import CreateCrmInteraction from '../components/CRM/CreateInteraction.vue'
-    import EmailTranscript from '../components/Transcript/SendToEmail.vue'
-    import CustomerEdit from './Chat/Customer/Edit.vue'
+    import UserInput from './ChatWindow/UserInput.vue'
+    import MessageList from './ChatWindow/MessageList.vue'
 
     export default {
         components: {
             UserInput,
-            MessageList,
-            CloseConversation,
-            CreateCrmInteraction,
-            EmailTranscript,
-            CustomerEdit
+            MessageList
         },
 
-        props: ['value', 'campaignName', 'campaignLabel', 'hideQueuePosition', 'author', 'origin'],
+        props: ['value', 'hideQueuePosition', 'author'],
 
         data() {
             return {
                 conversation: null,
                 messages: collect([]),
-                customer: null,
-                agent: null,
-                department_name: null,
+                chatter: null,
+                admin: null,
                 queue_position: null,
 
-                conversation_url: '',
-
-                has_agent_reply: false,
+                has_reply: false,
 
                 was_closed: false,
 
@@ -128,14 +55,6 @@
                 if (!_.isUndefined(value) && !_.isNull(value)) {
                     return moment(value).format('ll LTS');
                 }
-            },
-
-            transcriptWasSent(value) {
-                if (value > 0) {
-                    return "Yes";
-                }
-
-                return "No";
             }
         },
 
@@ -146,12 +65,6 @@
 
             Echo.channel(`conversation.${this.value}`)
                 .listen('NewConversationFound', (data) => {
-                    this.applyEventPayload(data);
-                })
-                .listen('ConversationAssigned', (data) => {
-                    let message = data.payload.messages;
-
-                    this.removeFromMessages(message.idx);
                     this.applyEventPayload(data);
                 })
                 .listen('ReplySent', (data) => {
@@ -188,7 +101,7 @@
                                     idx: item.idx,
                                     type: item.type,
                                     content: item.content,
-                                    from: item.from_agent ? 'agent' : 'client',
+                                    from: item.from_admin ? 'admin' : 'chatter',
                                     is_system_message: item.is_system_message,
                                     origin: 'website',
                                     is_sending: false,
@@ -197,15 +110,14 @@
                             }
                         });
 
-                        this.messageHasAgentReply();
+                        this.messageHasAdminReply();
 
-                        this.customer = data.customer;
-                        this.agent = data.agent;
+                        this.chatter = data.chatter;
+                        this.admin = data.admin;
                         this.conversation = data;
 
                         this.queue_position = data.queue_position;
 
-                        this.department_name = data.department.name;
                         this.conversation_url = data.link;
                     })
                     .catch(error => {
@@ -213,8 +125,9 @@
             },
 
             submit(params) {
-                params['idx'] = this.pushToMessages(params);
+                this.pushToMessages(params);
 
+                console.log(params);
                 axios.post(`/conversation/${this.value}/chat`, params)
                     .then(({data}) => {
                         if (data.success == false) {
@@ -235,12 +148,13 @@
                 let content = _.trim(message.content);
 
                 if (!_.isEmpty(content)) {
-                    if (this.isExistingMessageIdx(message.idx)) {
+                    let msg_idx = _.toInteger(message.idx);
+                    if (this.isExistingMessageIdx(msg_idx)) {
                         this.messages.push({
-                            idx: message.idx,
+                            idx: msg_idx,
                             type: message.type,
                             content: message.content,
-                            from: message.from_agent ? 'agent' : 'client',
+                            from: message.from_admin ? 'admin' : 'chatter',
                             is_system_message: message.is_system_message,
                             origin: 'website',
                             is_sending: false,
@@ -249,8 +163,8 @@
                     }
                 }
 
-                this.customer = data.payload.customer;
-                this.agent = data.payload.agent;
+                this.chatter = data.payload.chatter;
+                this.admin = data.payload.admin;
                 this.conversation = data.payload;
                 this.queue_position = data.payload.queue_position;
                 this.was_closed = false;
@@ -258,21 +172,16 @@
                 this.department_name = data.payload.concern;
                 this.conversation_url = data.payload.link;
 
-                this.messageHasAgentReply();
+                this.messageHasAdminReply();
             },
 
             pushToMessages(params) {
-                let last_message = this.messages.last();
-                let last_message_index = 0;
-                if (!_.isUndefined(last_message)) {
-                    last_message_index = last_message.idx + 1;
-                }
-
                 let content = _.trim(params.content);
+                let msg_idx = _.toInteger(params.idx);
 
                 if (!_.isEmpty(content)) {
                     this.messages.push({
-                        idx: last_message_index,
+                        idx: msg_idx,
                         type: params.type,
                         content: params.content,
                         from: params.from,
@@ -281,8 +190,6 @@
                         is_sending: params.is_sending
                     });
                 }
-
-                return last_message_index;
             },
 
             removeFromMessages(idx) {
@@ -309,18 +216,13 @@
                 return mes == -1;
             },
 
-            messageHasAgentReply() {
-                let agent_reply = this.messages.where('from', 'agent').where('is_system_message', false).first();
-                if (!_.isUndefined(agent_reply)) {
-                    this.has_agent_reply = true;
+            messageHasAdminReply() {
+                let admin_reply = this.messages.where('from', 'admin').where('is_system_message', false).first();
+                if (!_.isUndefined(admin_reply)) {
+                    this.has_reply = true;
                 } else {
-                    this.has_agent_reply = false;
+                    this.has_reply = false;
                 }
-            },
-
-            updateCustomerDetails(data) {
-                this.customer = data;
-                this.show_chat_window = true;
             }
         }
     }

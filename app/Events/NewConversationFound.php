@@ -35,6 +35,9 @@ class NewConversationFound implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('conversation.' . $this->session_id);
+        return [
+            new Channel('conversation.' . $this->session_id),
+            new Channel('admin-conversation'),
+        ];
     }
 }

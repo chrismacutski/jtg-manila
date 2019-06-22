@@ -8,7 +8,7 @@
                 <span class="pl-4">{{ seconds | twoDigits }} <small>SECONDS</small></span>
             </p>
         </div>
-        <a :href="'/events/' + event.id" class="btn btn-transparent p-3">LEARN MORE</a>
+        <a :href="'/events/' + event.hash_id" class="btn btn-transparent p-3">LEARN MORE</a>
     </div>
 </template>
 <script>

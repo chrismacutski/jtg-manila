@@ -52,6 +52,11 @@ class LoginController extends Controller
                         ];
                         break;
                 }
+            } else {
+                return [
+                    'success' => true,
+                    'user' => auth()->user()
+                ];
             }
         } else {
             return [

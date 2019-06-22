@@ -101,6 +101,10 @@ Vue.component('about-what-we-believe', require('./components/Frontend/About/What
 
 Vue.component('connect-with-us-banner', require('./components/Contact/Banner.vue').default);
 
+Vue.component('login', require('./components/Login.vue').default);
+
+Vue.component('conversations-list', require('./components/Chat.vue').default);
+
 import SweetModal from "sweet-modal-vue/src/plugin.js";
 
 Vue.use(SweetModal);

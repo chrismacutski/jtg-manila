@@ -18,3 +18,8 @@ Broadcast::channel('App.User.{id}', function ($user, $id) {
 Broadcast::channel('conversation.{sessionId}', function ($sessionId) {
     return true;
 });
+
+Broadcast::channel('admin-conversation', function () {
+    return true;
+});
+
