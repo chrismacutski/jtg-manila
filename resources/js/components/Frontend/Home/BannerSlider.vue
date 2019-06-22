@@ -4,8 +4,8 @@
                    :pauseOnHover="false"
                    :slide-content-outside="false"
                    autoplay>
-        <i slot="arrowLeft" class="icon icon-chevron-left"></i>
-        <i slot="arrowRight" class="icon icon-chevron-right"></i>
+        <i slot="arrowLeft" class="fa fa-chevron-left"></i>
+        <i slot="arrowRight" class="fa fa-chevron-right"></i>
 
         <vueper-slide v-for="(img, i) in images"
                       :key="i"

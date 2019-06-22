@@ -31,7 +31,7 @@
         ])
 
         @include('frontend.partials.loader', [
-            'img' => '/images/loader.gif'
+            'img' => '/images/jtg-bg.jpg'
         ])
 
         <window-controller :hide-queue-position="{{ json_encode(config('chat.hide_queue_position')) }}"
