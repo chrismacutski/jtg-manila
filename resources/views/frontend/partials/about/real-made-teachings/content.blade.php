@@ -23,7 +23,7 @@
                 <div class="d-flex services jtg-animate text-lg-right">
                     {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
                     <div class="media-body pr-lg-5">
-                        <h3 class="heading mb-3">REAL Active Member</h3>
+                        <h3 class="heading mb-3">REAL Active Family Member</h3>
                     </div>
                 </div>
                 <div class="d-flex services jtg-animate text-lg-right">

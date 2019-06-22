@@ -35,13 +35,31 @@
                 <div class="d-flex services jtg-animate text-lg-right">
                     {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
                     <div class="media-body pr-lg-5">
-                        <h3 class="heading mb-3">The Salvation of Man/h3>
+                        <h3 class="heading mb-3">The Salvation of Man</h3>
                     </div>
                 </div>
                 <div class="d-flex services jtg-animate text-lg-right">
                     {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
                     <div class="media-body pr-lg-5">
                         <h3 class="heading mb-3">The Ordinances of the Church</h3>
+                    </div>
+                </div>
+                <div class="d-flex services jtg-animate text-lg-right">
+                    {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
+                    <div class="media-body pr-lg-5">
+                        <h3 class="heading mb-3">The Blessed Hope</h3>
+                    </div>
+                </div>
+                <div class="d-flex services jtg-animate text-lg-right">
+                    {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
+                    <div class="media-body pr-lg-5">
+                        <h3 class="heading mb-3">The Millennial Reign of Christ</h3>
+                    </div>
+                </div>
+                <div class="d-flex services jtg-animate text-lg-right">
+                    {{--<div class="icon order-lg-last d-flex align-items-center justify-content-center"><span class="flaticon-bible"></span></div>--}}
+                    <div class="media-body pr-lg-5">
+                        <h3 class="heading mb-3">The Final Judgment</h3>
                     </div>
                 </div>
             </div>
@@ -81,6 +99,18 @@
                     {{--<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-promotion"></span></div>--}}
                     <div class="media-body pl-lg-5">
                         <h3 class="heading mb-3">Divine Healing</h3>
+                    </div>
+                </div>
+                <div class="d-flex services jtg-animate text-lg-left">
+                    {{--<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-promotion"></span></div>--}}
+                    <div class="media-body pl-lg-5">
+                        <h3 class="heading mb-3">The New Heavens and the New Earth</h3>
+                    </div>
+                </div>
+                <div class="d-flex services jtg-animate text-lg-left">
+                    {{--<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-promotion"></span></div>--}}
+                    <div class="media-body pl-lg-5">
+                        <h3 class="heading mb-3">Perceiving the Holy Man of God</h3>
                     </div>
                 </div>
             </div>
