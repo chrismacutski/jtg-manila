@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-stretch">
         <div class="col-3 d-flex align-items-center">
             <a class="navbar-brand" href="/">
-                JTG Manila <span>Church</span>
+                <img src="/images/jtg-banner.png" width="50px" height="50px" style="margin-top: 10px; margin-right: 5px"/>JTG Manila<span style="font-size: 24px; margin-top: -20px; padding-left: 53px;">Church</span>
             </a>
         </div>
         <div class="col-9 d-flex align-items-center text-right">
