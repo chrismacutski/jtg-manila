@@ -1,6 +1,6 @@
 <?php
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::post('member/login', 'Auth\Custom\LoginController@login');
 Route::post('member/register', 'Auth\Custom\RegisterController@store');
