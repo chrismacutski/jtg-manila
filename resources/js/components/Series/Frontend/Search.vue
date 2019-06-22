@@ -16,26 +16,26 @@
                                 <template v-for="error in errors.name">{{ error }}</template>
                             </div>
                         </div>
-                        <div class="col-md col-lg">
-                            <label class="d-flex justify-content-start font-weight-bold">FROM</label>
-                            <flat-pickr v-model="filters.starting_at_from"
-                                        :config="dateConfig"
-                                        :class="[errors.starting_at_from ? 'form-control is-invalid' : 'form-control']"></flat-pickr>
+                        <!--<div class="col-md col-lg">-->
+                            <!--<label class="d-flex justify-content-start font-weight-bold">FROM</label>-->
+                            <!--<flat-pickr v-model="filters.starting_at_from"-->
+                                        <!--:config="dateConfig"-->
+                                        <!--:class="[errors.starting_at_from ? 'form-control is-invalid' : 'form-control']"></flat-pickr>-->
 
-                            <div :class="[errors.starting_at_from ? 'invalid-feedback text-left' : '']">
-                                <template v-for="error in errors.starting_at_from">{{ error }}</template>
-                            </div>
-                        </div>
-                        <div class="col-md col-lg">
-                            <label class="d-flex justify-content-start font-weight-bold">TO</label>
-                            <flat-pickr v-model="filters.starting_at_to"
-                                        :config="dateConfig"
-                                        :class="[errors.starting_at_to ? 'form-control is-invalid' : 'form-control']"></flat-pickr>
+                            <!--<div :class="[errors.starting_at_from ? 'invalid-feedback text-left' : '']">-->
+                                <!--<template v-for="error in errors.starting_at_from">{{ error }}</template>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md col-lg">-->
+                            <!--<label class="d-flex justify-content-start font-weight-bold">TO</label>-->
+                            <!--<flat-pickr v-model="filters.starting_at_to"-->
+                                        <!--:config="dateConfig"-->
+                                        <!--:class="[errors.starting_at_to ? 'form-control is-invalid' : 'form-control']"></flat-pickr>-->
 
-                            <div :class="[errors.starting_at_to ? 'invalid-feedback text-left' : '']">
-                                <template v-for="error in errors.starting_at_to">{{ error }}</template>
-                            </div>
-                        </div>
+                            <!--<div :class="[errors.starting_at_to ? 'invalid-feedback text-left' : '']">-->
+                                <!--<template v-for="error in errors.starting_at_to">{{ error }}</template>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="col-md col-lg align-self-end">
                             <button :disabled="disableFindSeriesButton" type="submit" class="btn btn-primary form-control" v-html="findSeriesButtonText"></button>
                         </div>
