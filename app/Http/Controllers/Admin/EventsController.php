@@ -88,7 +88,7 @@ class EventsController extends Controller
                 if ($image_src->isValid()) {
                     $file_path = $image_src->storePubliclyAs('events/' . $event->id, 'image_src_' . $event->id . '.' .$image_src->getClientOriginalExtension(), 'public');
 
-                    $event->image_src = $file_path;
+                    $event->image_src = 'storage/' . $file_path;
                     $image_resize = Image::make($image_src->getRealPath());
                     $image_resize->resize(1440, 760);
                     $image_resize->save(storage_path('app/public/' . $file_path));
@@ -101,7 +101,7 @@ class EventsController extends Controller
                 if ($image_thumbnail_src->isValid()) {
                     $file_path = $image_thumbnail_src->storePubliclyAs('events/' . $event->id, 'image_thumbnail_src' . $event->id . '.' . $image_thumbnail_src->getClientOriginalExtension(), 'public');
 
-                    $event->image_thumbnail_src = $file_path;
+                    $event->image_thumbnail_src = 'storage/' . $file_path;
 
                     $image_resize = Image::make($image_thumbnail_src->getRealPath());
                     $image_resize->resize(1440, 760);
@@ -147,7 +147,10 @@ class EventsController extends Controller
                 if ($image_src->isValid()) {
                     $file_path = $image_src->storePubliclyAs('events/' . $event->id, 'image_src_' . $event->id . '.' .$image_src->getClientOriginalExtension(), 'public');
 
-                    $event->image_src = $file_path;
+                    $event->image_src = 'storage/' . $file_path;
+                    $image_resize = Image::make($image_src->getRealPath());
+                    $image_resize->resize(1440, 760);
+                    $image_resize->save(storage_path('app/public/' . $file_path));
                 }
             }
 
@@ -157,7 +160,10 @@ class EventsController extends Controller
                 if ($image_thumbnail_src->isValid()) {
                     $file_path = $image_thumbnail_src->storePubliclyAs('events/' . $event->id, 'image_thumbnail_src' . $event->id . '.' . $image_thumbnail_src->getClientOriginalExtension(), 'public');
 
-                    $event->image_thumbnail_src = $file_path;
+                    $event->image_thumbnail_src = 'storage/' . $file_path;
+                    $image_resize = Image::make($image_thumbnail_src->getRealPath());
+                    $image_resize->resize(1440, 760);
+                    $image_resize->save(storage_path('app/public/' . $file_path));
                 }
             }
             $event->updateHeaderText(request('header_text', ''));
