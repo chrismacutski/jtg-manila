@@ -16,4 +16,11 @@ class Visitor extends Model
     protected $dates = [
         'visiting_at', 'notified_at', 'followed_up_at'
     ];
+
+    public static function addNew(array $params)
+    {
+        $attribs = $params;
+
+        return Visitor::create($attribs);
+    }
 }

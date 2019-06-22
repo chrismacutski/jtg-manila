@@ -81,10 +81,13 @@
                         </div>
 
                         <div class="form-group">
-                            <h5 class="text-white d-flex justify-content-start">PREFERRED DATE AND TIME OF VISIT</h5>
-                            <flat-pickr v-model="form.visiting_at"
-                                        :config="config"
-                                        class="form-control"></flat-pickr>
+                            <h5 class="text-white d-flex justify-content-start">PREFERRED DATE OF VISIT</h5>
+                            <input type="date"
+                                   v-model="form.visiting_at"
+                                   :class="[errors.visiting_at ? 'form-control is-invalid' : 'form-control']" />
+                            <!--<flat-pickr v-model="form.visiting_at"-->
+                                        <!--:config="config"-->
+                                        <!--class="form-control"></flat-pickr>-->
 
                             <div :class="[errors.visiting_at ? 'invalid-feedback text-left' : '']">
                                 <template v-for="error in errors.visiting_at">{{ error }}</template>
@@ -117,6 +120,10 @@
     .sModal {
         z-index: 16 !important;
     }
+
+    .flatpickr-calendar {
+        z-index: 20 !important;
+    }
 </style>
 
 <script>
@@ -136,7 +143,6 @@
                     email_address: '',
                     phone_number: '',
                     type: '',
-                    message: '',
                     visiting_at: ''
                 },
 
@@ -146,9 +152,10 @@
 
                 config: {
                     wrap: true, // set wrap to true only when using 'input-group'
-                    altFormat: 'M j, Y',
+                    altFormat: 'M j, Y G:i K',
                     altInput: true,
-                    dateFormat: 'Y-m-d'
+                    dateFormat: 'Y-m-d H:i:s',
+                    enableTime: true
                 }
             }
         },
@@ -231,18 +238,34 @@
             },
 
             onSubmit() {
-                this.submitButtonText = 'Submitting ...';
+                this.submitButtonText = '<i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>';
 
-                axios.post(`/customer`, this.form)
+                axios.post(`/visitors`, this.form)
                     .then(({data}) => {
-                        this.$emit('created-customer');
-                    }).catch(error => {
-                    if (error.response.data.errors) {
-                        this.errors = error.response.data.errors;
-                    }
+                        let visiting_at = moment(data.visiting_at).format('LL');
 
-                    this.submitButtonText = 'SUBMIT';
-                });
+                        this.$refs.modal.close();
+
+                        this.$noty.success("Thank you, we expect to see you on " + visiting_at, {
+                            theme: 'metroui',
+                            layout: 'topRight',
+                        })
+
+                        this.submitButtonText = 'SUBMIT';
+
+                        this.form.first_name = '';
+                        this.form.last_name = '';
+                        this.form.email_address = '';
+                        this.form.phone_number = '';
+                        this.form.type = '';
+                        this.form.visiting_at = '';
+                    }).catch(error => {
+                        if (error.response.data.errors) {
+                            this.errors = error.response.data.errors;
+                        }
+
+                        this.submitButtonText = 'SUBMIT';
+                    });
             }
         }
 

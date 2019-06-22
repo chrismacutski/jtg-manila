@@ -40,9 +40,9 @@
                     <li class="nav-item"><a href="{{ route('events.index') }}" class="nav-link">Events</a></li>
                 @endif
                 @if(url()->current() == url()->route('frontend.contact'))
-                    <li class="nav-item active"><a href="{{ route('frontend.contact') }}" class="nav-link">Contact</a></li>
+                    <li class="nav-item active"><a href="{{ route('frontend.contact') }}" class="nav-link">Connect with us</a></li>
                 @else
-                    <li class="nav-item"><a href="{{ route('frontend.contact') }}" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="{{ route('frontend.contact') }}" class="nav-link">Connect with us</a></li>
                 @endif
                 @guest
                     @if(url()->current() == url()->route('register'))

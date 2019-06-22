@@ -99,6 +99,8 @@ Vue.component('about-departments', require('./components/Frontend/About/Departme
 Vue.component('about-department-list', require('./components/Frontend/About/DepartmentList.vue').default);
 Vue.component('about-what-we-believe', require('./components/Frontend/About/WhatWeBelieve.vue').default);
 
+Vue.component('connect-with-us-banner', require('./components/Contact/Banner.vue').default);
+
 import SweetModal from "sweet-modal-vue/src/plugin.js";
 
 Vue.use(SweetModal);

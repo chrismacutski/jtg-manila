@@ -4,9 +4,7 @@
 @section('title', 'Contact')
 
 @section('content')
-    @include('frontend.partials.contact.banner', [
-        'banner_img' => '/images/city.jpg'
-    ])
+    <connect-with-us-banner :image="{{ json_encode('/images/city.jpg') }}"></connect-with-us-banner>
 
     <div class="container mt-5 mb-5">
         <div class="row">

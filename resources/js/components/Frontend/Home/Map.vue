@@ -8,7 +8,7 @@
                         <div class="card-body text-center">
                             <h2>Service Hours and Locations</h2>
                             <h6>Sundays | 10 AM & 4 PM</h6>
-                            <h6 class="pb-2">Thursdays | 8 PM</h6>
+                            <h6>Thursdays | 8 PM</h6>
                             <h6 class="pb-2">Haven (Youth Service) | 3 PM</h6>
 
                             <h6 class="pb-2">1001 Lope De Vega St. Corner Rizal Avenue, Sta. Cruz Manila, Philippines</h6>

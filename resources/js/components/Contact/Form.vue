@@ -59,27 +59,29 @@
             <div class="form-group">
                 <h6 class="text-white">TYPE OF CONTACT</h6>
                 <div class="form-check">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" value="General" v-model="form.type" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label text-white" for="customRadio1">General</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" value="Prayer Request" v-model="form.type" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label text-white" for="customRadio2">Prayer Request</label>
-                    </div>
+                    <template v-for="(type, key) in contactTypes">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" :id="'customRadio' + key" :value="type" v-model="form.type" :name="'customRadio' + key" class="custom-control-input">
+                            <label class="custom-control-label text-white" :for="'customRadio' + key">{{ type }}</label>
+                        </div>
+                    </template>
+
+                    <p class="text-danger small" v-if="errors.type">
+                        <template v-for="error in errors.type">{{ error }}</template>
+                    </p>
                 </div>
             </div>
 
             <div class="form-group">
                 <textarea placeholder="MESSAGE*"
-                          v-model="form.message"
+                          v-model="form.details"
                           cols="30"
                           rows="8"
-                          :class="[errors.message ? 'form-control rounded-0 is-invalid' : 'form-control rounded-0']">
+                          :class="[errors.details ? 'form-control rounded-0 is-invalid' : 'form-control rounded-0']">
                 </textarea>
 
-                <div :class="[errors.message ? 'invalid-feedback text-left' : '']">
-                    <template v-for="error in errors.message">{{ error }}</template>
+                <div :class="[errors.details ? 'invalid-feedback text-left' : '']">
+                    <template v-for="error in errors.details">{{ error }}</template>
                 </div>
             </div>
 
@@ -115,13 +117,19 @@
                     email_address: '',
                     phone_number: '',
                     type: '',
-                    message: ''
+                    details: ''
                 },
+
+                contactTypes: null,
 
                 errors : [],
 
                 submitButtonText: 'SUBMIT',
             }
+        },
+
+        mounted() {
+            this.getTypes();
         },
 
         watch: {
@@ -170,9 +178,21 @@
             onSubmit() {
                 this.submitButtonText = 'Submitting ...';
 
-                axios.post(`/customer`, this.form)
+                axios.post(`/contacts`, this.form)
                     .then(({data}) => {
-                        this.$emit('created-customer');
+                        this.$noty.success("Thank you, we will contact you the soonest time possible", {
+                            theme: 'metroui',
+                            layout: 'topRight',
+                        })
+
+                        this.submitButtonText = 'SUBMIT';
+
+                        this.form.first_name = '';
+                        this.form.last_name = '';
+                        this.form.email_address = '';
+                        this.form.phone_number = '';
+                        this.form.type = '';
+                        this.form.details = '';
                     }).catch(error => {
                     if (error.response.data.errors) {
                         this.errors = error.response.data.errors;
@@ -180,6 +200,13 @@
 
                     this.submitButtonText = 'SUBMIT';
                 });
+            },
+
+            getTypes() {
+                axios.get('/contact/types', {})
+                    .then(({data}) => {
+                       this.contactTypes = data;
+                    });
             }
         }
     }

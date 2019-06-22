@@ -16,3 +16,18 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+
+Artisan::command('jtg-manila:init-contact-types', function () {
+    \App\ContactType::firstOrCreate([
+        'name' => 'General'
+    ]);
+
+    \App\ContactType::firstOrCreate([
+        'name' => 'Prayer Request'
+    ]);
+
+    \App\ContactType::firstOrCreate([
+        'name' => 'Giving'
+    ]);
+});
