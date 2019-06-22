@@ -52,7 +52,7 @@
                                     </li>
                                 @endif
 
-                            @if (auth()->user()->hasAnyPermission([
+                                @if (auth()->user()->hasAnyPermission([
                                     'manage-series'
                                 ]))
                                     <li class="nav-item d-flex align-items-center">
@@ -64,6 +64,13 @@
                                 ]))
                                     <li class="nav-item d-flex align-items-center">
                                         <a class="nav-link" href="{{ route('admin.events.index') }}">Events</a>
+                                    </li>
+                                @endif
+                                @if (auth()->user()->hasRole([
+                                    'Admin'
+                                ]))
+                                    <li class="nav-item d-flex align-items-center">
+                                        <a class="nav-link" href="{{ route('user-roles') }}">User Permissions</a>
                                     </li>
                                 @endif
                             </ul>
