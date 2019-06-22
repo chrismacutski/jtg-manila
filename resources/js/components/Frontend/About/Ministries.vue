@@ -4,7 +4,7 @@
         <div class="container">
             <div :style="{'height' : fullheight}" class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
                 <div class="col-md-10 text-center jtg-animate" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-0">MINISTRIES</h1>
+                    <h1 class="mb-0">MINISTRY</h1>
                     <div class="mouse">
                     <a href="#" class="mouse-icon">
                         <div class="mouse-wheel"><span class="fa fa-chevron-circle-down"></span></div>

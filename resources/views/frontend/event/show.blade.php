@@ -17,7 +17,7 @@
                             <div class="row justify-content-center my-5">
                                 <div class="col-md-8 p-5 bg-darker">
                                     <h3 class="jtg-animate" style="text-transform: uppercase">{{ $header_text->header_text }}</h3>
-                                    <p class="jtg-animate text-justify" style="white-space: pre-line">
+                                    <p class="jtg-animate" style="white-space: pre-line">
                                         {!! $text_content->text_content  !!}
                                     </p>
                                 </div>
