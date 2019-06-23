@@ -17,7 +17,7 @@
                         <a href="{{ route('events.show', $event) }}" class="block-20" style="background-image: url('{{ '/' . $event->image_src }}'">
                         </a>
                         <div class="text p-4 d-block">
-                            <h3 class="heading mb-1 text-center"><a href="{{ route('events.show', $upcoming_event) }}">{{ $event->name }}</a></h3>
+                            <h3 class="heading mb-1 text-center"><a href="{{ route('events.show', $event) }}">{{ $event->name }}</a></h3>
                             <p class="time-loc text-center">
                             <h6 class="mr-2 font-weight-bold text-center">
                                 @if ($event->starting_at->format('Y-m-d') == $event->ending_at->format('Y-m-d'))
