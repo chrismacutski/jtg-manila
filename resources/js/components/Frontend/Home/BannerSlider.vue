@@ -1,16 +1,78 @@
 <template>
-    <vueper-slides fade slide-content-outside="top" :touchable="false" :slide-ratio="0.3"
+    <vueper-slides   @before-init="logEvents"
+                     @ready="logEvents"
+                     @before-slide="logEvents"
+                     @slide="logEvents"
+                     fade
+                   :touchable="false"
+                   :slide-ratio="0.3"
                    :fixed-height="fullheight"
                    :pauseOnHover="false"
-                   :slide-content-outside="false"
+                   speed="10000"
+                   slide-image-inside
                    autoplay>
         <i slot="arrowLeft" class="fa fa-chevron-left"></i>
         <i slot="arrowRight" class="fa fa-chevron-right"></i>
 
-        <vueper-slide v-for="(img, i) in images"
-                      :key="i"
-                      v-lazy:background-image="img"
-                      :style="'background-color: ' + ['#373a3e'][i % 2]">
+        <vueper-slide>
+            <div slot="slideContent">
+
+                <div class="welcome-text">
+                    <transition
+                            name="fade"
+                            enter-active-class="animated fadeInUp">
+                        <img v-if="load" class="img-fluid" src="/images/loader.png" style="animation-delay: 500ms; animation-duration: 2000ms"/>
+                    </transition>
+
+                    <transition
+                            name="fade"
+                            enter-active-class="animated fadeInUp">
+                        <img v-if="load" class="img-fluid" src="/images/jtg-manila-church.png" style="margin-top:25px; animation-delay: 1000ms; animation-duration: 3000ms"/>
+                    </transition>
+                </div>
+                <div class="mouse2">
+                    <a href="#" class="mouse-icon2">
+                        <div class="mouse-wheel2"><i class="fa fa-chevron-circle-down"></i></div>
+                    </a>
+                </div>
+            </div>
+        </vueper-slide>
+        <vueper-slide v-lazy:background-image="'/images/slider-lg-2-no-text.jpg'"
+                      :style="'max-width: 100%; height: auto;'">
+            <div slot="slideContent">
+                <div class="welcome-text">
+                    <transition
+                            name="fade"
+                            enter-active-class="animated fadeInLeft">
+                        <img v-if="load" class="img-fluid" src="/images/slider-2-1.png" style="margin-top:25px; animation-delay: 500ms; animation-duration: 4000ms"/>
+                    </transition>
+
+                    <transition
+                            name="fade"
+                            enter-active-class="animated fadeInRight">
+                        <img v-if="load" class="img-fluid slider2" src="/images/slider-2-2.png" style="animation-delay: 2500ms; animation-duration: 4000ms"/>
+                    </transition>
+                </div>
+                <div class="mouse2">
+                    <a href="#" class="mouse-icon2">
+                        <div class="mouse-wheel2"><i class="fa fa-chevron-circle-down"></i></div>
+                    </a>
+                </div>
+            </div>
+        </vueper-slide>
+
+        <vueper-slide v-lazy:background-image="'/images/slider-lg-3.jpg'"
+                      :style="'max-width: 100%; height: auto;'">
+            <div slot="slideContent">
+                <div class="mouse2">
+                    <a href="#" class="mouse-icon2">
+                        <div class="mouse-wheel2"><i class="fa fa-chevron-circle-down"></i></div>
+                    </a>
+                </div>
+            </div>
+        </vueper-slide>
+        <vueper-slide v-lazy:background-image="'/images/slider-lg-4.jpg'"
+                      :style="'max-width: 100%; height: auto;'">
             <div slot="slideContent">
                 <div class="mouse2">
                     <a href="#" class="mouse-icon2">
@@ -35,9 +97,20 @@
         font-size: 2rem !important;
     }
 
-    .welcome-text {
-        position: relative;
-        z-index: 1;
+    .slider2 {
+        margin-top: -80px;
+    }
+
+    @media (min-width: 0) {
+        .slider2 {
+            margin-top: -30px;
+        }
+    }
+
+    @media (min-width: 576px) {
+        .slider2 {
+            margin-top: -80px;
+        }
     }
 </style>
 
@@ -49,6 +122,8 @@
 
         data() {
             return {
+                load: false,
+
                 breakpoints: {
                     1200: {
                         slideRatio: 1 / 5
@@ -67,7 +142,9 @@
                     }
                 },
 
-                fullheight: '0px'
+                fullheight: '0px',
+
+                load: false
             }
         },
 
@@ -80,6 +157,8 @@
         },
 
         mounted() {
+            this.load != this.load;
+
             this.fullheight = $(window).height() + 'px';
 //            console.log($(window).height());
 //            $(window).height()
@@ -94,6 +173,26 @@
         methods: {
             getWindowHeight(event) {
                 this.fullheight = $(window).height() + 'px';
+            },
+
+            logEvents (eventName, params) {
+                if (eventName == 'before-slide') {
+                    this.load = false;
+                    this.$nextTick(() => {
+                        this.load = true;
+                    })
+                }
+
+                if (eventName == 'slide') {
+
+                }
+                if (eventName == 'ready') {
+                    if (params.currentSlide.index == 0) {
+                        this.load = true;
+                    }
+                }
+
+//                this.events += ` ${eventName},  ${JSON.stringify(params, null, 0)}`
             }
         }
 
