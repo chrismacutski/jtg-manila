@@ -26,7 +26,7 @@
 
                     <transition
                             name="fade"
-                            enter-active-class="animated fadeInUp">
+                            enter-active-class="animated zoomIn">
                         <img v-if="load" class="img-fluid" src="/images/jtg-manila-church.png" style="margin-top:25px; animation-delay: 1000ms; animation-duration: 3000ms"/>
                     </transition>
                 </div>
