@@ -61,12 +61,31 @@
             </div>
         </vueper-slide>
 
-        <vueper-slide v-lazy:background-image="'/images/slider-lg-3.jpg'"
+        <vueper-slide v-lazy:background-image="'/images/slider-lg-3-no-text.jpg'"
                       :style="'max-width: 100%; height: auto;'">
             <div slot="slideContent">
-                <div class="mouse2">
+                <div class="welcome-text">
+                    <transition
+                            name="fade"
+                            enter-active-class="animated lightSpeedIn">
+                        <img v-if="load" src="/images/be-informed.png" style="margin-top:-100px; animation-delay: 200ms; width: 400px;"/>
+                    </transition>
+
+                    <transition
+                            name="fade"
+                            enter-active-class="animated lightSpeedIn">
+                        <img v-if="load" src="/images/stay-updated.png" style="margin-left: 10px; margin-top:-30px; animation-delay: 200ms; width: 400px;"/>
+                    </transition>
+
+                    <transition
+                            name="fade"
+                            enter-active-class="animated tada">
+                        <img v-if="load" src="/images/stay-updated-fb.png" style="margin-top: 40px; animation-delay: 500ms; margin-left: 25px; width: 400px;"/>
+                    </transition>
+                </div>
+                <div class="mouse2" style="bottom: -13em !important;">
                     <a href="#" class="mouse-icon2">
-                        <div class="mouse-wheel2"><i class="fa fa-chevron-circle-down"></i></div>
+                        <div class="mouse-wheel2" style="margin: 2px 0px;"><i class="fa fa-chevron-circle-down"></i></div>
                     </a>
                 </div>
             </div>
