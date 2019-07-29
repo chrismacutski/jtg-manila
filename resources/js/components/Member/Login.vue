@@ -123,7 +123,7 @@
                 axios.post(`/member/login`, this.form)
                     .then(({data}) => {
                         if (data.success == true) {
-                            this.$emit('successful');
+                            this.$emit('successful', data.attendee);
                             this.form.username = '';
                             this.form.password = '';
 

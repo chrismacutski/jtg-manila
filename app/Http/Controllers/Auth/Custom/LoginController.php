@@ -35,14 +35,15 @@ class LoginController extends Controller
 
                         if ($event) {
                             // sign up attendee
-                            $event->signUpAttendee(auth()->user()->id);
+                            $attendee = $event->signUpAttendee(auth()->user()->id);
                         }
 
                         return [
                             'success' => true,
                             'user' => auth()->user(),
                             'type' => 'event',
-                            'data' => $event
+                            'data' => $event,
+                            'attendee' => $attendee
                         ];
                         break;
                     default:

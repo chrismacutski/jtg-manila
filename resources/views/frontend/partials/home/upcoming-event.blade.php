@@ -1,4 +1,4 @@
-<section class="jtg-intro py-2" style="background-color: #e40d42">
+<section class="jtg-intro py-2" style="background-color: #373a3e">
     <div class="overlay"></div>
     <div class="container">
         <div class="row d-flex align-items-center">

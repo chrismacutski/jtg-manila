@@ -87,6 +87,7 @@ Vue.component('frontend-series-list', require('./components/Series/Frontend/List
 Vue.component('home-who-whe-are', require('./components/Frontend/Home/WhoWeAre.vue').default);
 Vue.component('home-map', require('./components/Frontend/Home/Map.vue').default);
 
+Vue.component('about', require('./components/Frontend/About/About.vue').default);
 Vue.component('about-nav', require('./components/Frontend/About/Nav.vue').default);
 Vue.component('about-history', require('./components/Frontend/About/History.vue').default);
 Vue.component('about-leadership', require('./components/Frontend/About/Leadership.vue').default);

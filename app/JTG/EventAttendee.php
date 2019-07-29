@@ -11,7 +11,7 @@ class EventAttendee extends Model
 
     protected $fillable = [
         'first_name', 'last_name', 'phone_number', 'email_address',
-        'amount_paid', 'paid_at', 'member_id', 'event_id'
+        'amount_paid', 'paid_at', 'member_id', 'event_id', 'message'
     ];
 
     protected $dates = [

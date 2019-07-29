@@ -20,7 +20,7 @@
                     <th class="align-middle">LAST NAME</th>
                     <th class="align-middle">PHONE NUMBER</th>
                     <th class="align-middle">EMAIL ADDRESS</th>
-                    <!--<th class="align-middle"></th>-->
+                    <th class="align-middle"></th>
                     </thead>
                     <tbody>
                     <tr v-for="event_attendee in event_attendees">
@@ -32,16 +32,14 @@
                         <td class="align-middle">{{ event_attendee.phone_number }}</td>
                         <td class="align-middle">{{ event_attendee.email_address}}</td>
 
-                        <!--<td class="align-middle">-->
-                            <!--<div class="btn-group" role="group">-->
+                        <td class="align-middle">
+                            <div class="btn-group" role="group">
+                                <show-note :message="event_attendee.message"></show-note>
                                 <!--<button class="btn btn-sm mr-1" @click="showEventAttendee(event)">-->
                                     <!--<i class="fa fa-eye fa-lg"></i>-->
                                 <!--</button>-->
-                                <!--<button class="btn btn-sm" @click="editEventAttendee(event)">-->
-                                    <!--<i class="fa fa-edit fa-lg"></i>-->
-                                <!--</button>-->
-                            <!--</div>-->
-                        <!--</td>-->
+                            </div>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -59,10 +57,11 @@
 <script>
     import Toolbar from './Utils/Toolbar.vue'
     import Checkbox from './Utils/Checkbox.vue'
+    import ShowNote from './Utils/ShowNote.vue'
     import Paginator from '../../../components/Paginator.vue'
 
     export default {
-        components: {Toolbar, Checkbox, Paginator },
+        components: {Toolbar, Checkbox, ShowNote, Paginator },
 
         props: ['event'],
 
@@ -137,14 +136,6 @@
                 });
 
                 this.event_attendees = event_attendees;
-            },
-
-            editEventAttendee(event) {
-                window.location.href = '/admin/events/' + event.hash_id + '/edit';
-            },
-
-            showEventAttendee(event) {
-                window.location.href = '/admin/events/' + event.hash_id;
             },
 
             deleteEventAttendee() {

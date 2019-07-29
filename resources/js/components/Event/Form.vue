@@ -11,7 +11,7 @@
                       :type="'event'"
                       :model-id="jtgEvent.id"
                       @not-a-member="hideMemberLogin = true"
-                      @successful="hideMemberLogin = true"></member-login>
+                      @successful="successfulMemberLogin"></member-login>
         <form @submit.prevent="onSubmit" v-if="hideMemberLogin">
             <div class="form-group mb-4">
                 <h5 class="text-white d-flex justify-content-start">WHAT'S YOUR NAME?</h5>
@@ -120,6 +120,7 @@
         data () {
             return {
                 form: {
+                    member_id: '',
                     first_name : '',
                     last_name : '',
                     email_address: '',
@@ -182,8 +183,10 @@
             onSubmit() {
                 this.submitButtonText = '<i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>';
 
+                console.log(this.form);
                 axios.post(`/events/${this.jtgEvent.hash_id}/guest-sign-up`, this.form)
                     .then(({data}) => {
+                        this.form.member_id = '';
                         this.form.first_name = '';
                         this.form.last_name = '';
                         this.form.email_address = '';
@@ -195,6 +198,9 @@
                             theme: 'metroui',
                             layout: 'topRight',
                         })
+
+                        this.submitButtonText = 'SUBMIT';
+
                     }).catch(error => {
                         if (error.response.data.errors) {
                             this.errors = error.response.data.errors;
@@ -219,6 +225,16 @@
 
                         this.submitButtonText = 'SUBMIT';
                     });
+            },
+
+            successfulMemberLogin(data) {
+                this.hideMemberLogin = true
+
+                this.form.member_id = data.member_id;
+                this.form.first_name = data.first_name;
+                this.form.last_name = data.last_name;
+                this.form.email_address = data.email_address;
+                this.form.phone_number = data.phone_number;
             }
         }
     }

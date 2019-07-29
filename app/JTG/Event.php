@@ -233,10 +233,6 @@ class Event extends Model
 
         $isExisting = EventAttendee::isExisting($this, $userId, $params);
 
-        if (!is_null($isExisting)) {
-            throw new \Exception("You are already signed up to this event");
-        }
-
         $attribs = NULL;
 
         if (!is_null($params)) {
@@ -246,6 +242,7 @@ class Event extends Model
                 'last_name' => $params['last_name'],
                 'phone_number' => $params['phone_number'],
                 'email_address' => $params['email_address'],
+                'message' => $params['message']
             ];
         }
 
@@ -262,11 +259,26 @@ class Event extends Model
             }
         }
 
+        if (!is_null($isExisting)) {
+            logger('Found an existing event attendee ' . $isExisting->id);
+            $attendee = $isExisting;
+            $attendee->member_id = $attribs['member_id'];
+            $attendee->first_name = $attribs['first_name'];
+            $attendee->last_name = $attribs['last_name'];
+            $attendee->phone_number = $attribs['phone_number'];
+            $attendee->email_address = $attribs['email_address'];
+            $attendee->message = isset($attribs['message']) ? $attribs['message'] : NULL;
+
+            $attendee->save();
+
+            return $attendee;
+        }
+
         if (is_null($attribs)) {
             throw new \Exception("Could not sign up event attendee to Event ID "  . $this->id . ", insufficient details");
         }
 
-        $this->attendees()->create($attribs);
+        return $this->attendees()->create($attribs);
     }
 
     public static function getCachedEvents()
