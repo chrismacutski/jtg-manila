@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateEventAttendeeRequest;
 use App\JTG\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -92,7 +93,7 @@ class EventsController extends Controller
             ->with('text_content', $text_content);
     }
 
-    public function guestSignUp(Event $event)
+    public function guestSignUp(CreateEventAttendeeRequest $request, Event $event)
     {
         try {
             $event->signUpAttendee(NULL, request()->only('member_id', 'first_name', 'last_name', 'phone_number', 'email_address', 'message'));

@@ -127,12 +127,12 @@
                             this.form.username = '';
                             this.form.password = '';
 
-                            if (data.type == 'event') {
-                                this.$noty.success("You are now part of " + data.data.name + ", See you there!", {
-                                    theme: 'metroui',
-                                    layout: 'topRight',
-                                })
-                            }
+//                            if (data.type == 'event') {
+//                                this.$noty.success("You are now part of " + data.data.name + ", See you there!", {
+//                                    theme: 'metroui',
+//                                    layout: 'topRight',
+//                                })
+//                            }
                         } else {
                             this.$noty.success("Something went wrong! Please try again or contact us", {
                                 theme: 'metroui',

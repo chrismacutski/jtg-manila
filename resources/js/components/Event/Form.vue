@@ -183,7 +183,6 @@
             onSubmit() {
                 this.submitButtonText = '<i class="fa fa-spinner fa-spin fa-lg fa-fw"></i>';
 
-                console.log(this.form);
                 axios.post(`/events/${this.jtgEvent.hash_id}/guest-sign-up`, this.form)
                     .then(({data}) => {
                         this.form.member_id = '';
@@ -216,10 +215,17 @@
 
                             this.$nextTick(() => this.$refs.username.focus())
 
-                            this.$noty.error(error.response.data.message, {
-                                theme: 'metroui',
-                                layout: 'topRight',
-                            })
+                            if (error.response.status == 422) {
+                                this.$noty.error("Please check the form and then submit again.", {
+                                    theme: 'metroui',
+                                    layout: 'topRight',
+                                });
+                            } else {
+                                this.$noty.error(error.response.data.message, {
+                                    theme: 'metroui',
+                                    layout: 'topRight',
+                                });
+                            }
                         }
 
 
